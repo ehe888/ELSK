@@ -1,0 +1,376 @@
+/* 
+ * Basic Reset
+ */
+* {
+    margin: 0; padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 { font-weight: normal; }
+img, fieldset { border: 0; }
+img { max-width: 100%; vertical-align: middle; }
+button { cursor: pointer; }
+ul { list-style: none; }
+a { text-decoration: none; }
+
+a:hover {
+    cursor: pointer;
+}
+/* 
+ * typograph
+ */
+body, input, select, textarea, button {
+    font-family: 'Helvetica', 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', 'Arial', 'sans-serif';
+}
+
+body {
+    font-size: 0.5em;
+}
+
+/* iphone6 + */
+@media (min-width: 375px) {
+    body {
+        font-size: 0.5em;
+    } 
+}
+
+@media (min-width: 640px) {
+    body {
+        font-size: 0.75em;
+    } 
+}
+
+@media (min-width: 1600px) {
+    body {
+        font-size: 1em;
+    } 
+}
+
+/*
+ * structure
+ */
+
+.container {
+    padding: 0;
+}
+
+.site {
+    margin: 0 auto;
+}
+
+@media (min-width: 1600px) {
+    .site{
+        max-width: 1600px;
+    }
+} 
+
+
+.site-header, .site-content, .site-footer {
+    width: 100%;
+    margin: auto;
+}
+
+
+@media (min-width: 640px) {
+    .site-header, .site-content, .site-footer {
+        width: 100%;
+        margin: auto;
+    }
+}
+
+@media (min-width: 1200px) {
+    .site-header, .site-content, .site-footer {
+        width: 66.25%;
+        margin: auto;
+    }
+}
+
+/*
+ * header section
+ * */
+.header-top-bar {
+    position: relative;
+    background: #FFF;
+    height: 7.5em;
+}
+
+.header-top-bar .logo {
+    position: relative;
+    display: block;
+    width: 71.5625%;
+    height: 100%;
+    background: url(../images/img-logo-sm.jpg) no-repeat left center;
+    background-size: contain;
+}
+
+.header-top-bar .nav-ec {
+    position: absolute;
+    top:0;
+    right:0;
+    width: 0;
+}
+.header-top-bar .nav-icon {
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    height: 7.5em;
+    width: 28.4375%;
+}
+
+.header-top-bar .nav-icon button {
+    position: absolute;
+    display: block;
+    margin-top: 0.85em;
+    right: 1em;
+    width: 3.425em;
+    height: 3.275em;
+    background: transparent url(../images/icon-nav-sm.jpg) no-repeat center center;
+    background-size: 100% 100%;
+    border: 0;
+}
+
+
+.header-nav {
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    /* Set our transitions up. */
+    -webkit-transition: max-height 0.5s;
+    -moz-transition: max-height 0.5s;
+    transition: max-height 0.5s;
+
+   /* height: 35em; */
+}
+
+
+.site-search {
+    position: relative;
+    display: block;
+    height: 5em;
+    margin-left: 7.25%;
+    margin-right: 6.25%;
+}
+
+.search-field {
+    background: #FFF;
+    line-height: 4em;    
+    border: 1px solid rgb(107, 144, 31);
+    border-radius: 0.5em;
+}
+.search-field input {
+    background: transparent;
+    padding: 0.1em 0.2em;
+    border: none;
+    height: 1.8em;
+    width: 16em;
+    font-size: 2em;
+    font-weight: bold;
+}
+.search-field button {
+    float: right;
+    background: rgb(107, 144, 31) url(../images/icon-search-small.png) no-repeat center center;
+    border: 0;
+    width: 4em;
+    height: 3em;
+}
+
+
+.header-nav ul li {
+    display: block;
+    height: 5em;
+}
+
+.header-nav ul li:first-child {
+    background: url(../images/img-hd-nav-top-bg.jpg) no-repeat center center;
+    background-size: 100% 100%;
+}
+
+.header-nav ul li:not(:first-child) a {
+    border-bottom: 1px solid rgb(107, 144, 31);
+}
+
+.header-nav ul li:last-child a {
+    border: none;
+}
+
+.header-nav ul li a {
+    display: block;
+    line-height: 2.5em;
+    font-size: 2em;
+    height: 100%;
+    color: rgb(107, 144, 31);
+    margin-left: 7.25%;
+    margin-right: 6.25%;
+}
+
+.header-nav ul li a span {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.25em;
+    font-weight: bold;
+}
+
+
+.header-banner {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+}
+
+.header-banner #slider1
+{
+    position: relative;
+    margin: 0 auto;
+}
+
+.slides-wrapper {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.slides-wrapper .page {
+    position: relative;
+    width: 100%;
+}
+
+.slides-wrapper .page .pic-wrapper {
+    display: block;
+    width: 100%;
+    padding-bottom: 62.5%;
+    background: url(../images/img-hd-banner-sm.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+
+
+
+@media (min-width: 640px) {
+    .header-top-line {
+        background: rgb(107, 144, 31);
+        height: 0.1857em; /* 3px */
+     }
+
+    .header-top-bar {
+        background: url(../images/img-header-top-bg.png) no-repeat center center;
+        background-size: 100% 100%;
+        height: 4.1875em; /* 67px */
+    }
+
+    .header-top-bar .logo {
+        height: 100%;
+        background: url(../images/img-logo.jpg) no-repeat left center;
+        background-size: contain;
+    }
+
+    .header-top-bar .nav-ec {
+        top:0;
+        right:0;
+        height: 100%;
+        width: 20.188679%;
+        background: url(../images/img-toec.jpg) no-repeat center center;
+        background-size: contain;
+    }
+
+    .header-top-bar .nav-icon {
+        display: none;
+    }
+
+    .slides-wrapper .page .pic-wrapper {
+        width: 100%;
+        padding-bottom: 44.245283018868%;
+        overflow: hidden;
+        background: url(../images/img-hd-banner.jpg) no-repeat 50% center;
+        background-size: cover;
+    }
+}
+
+@media (min-width: 1080px) {
+    .site-header, .site-content, .site-footer {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .header-top-bar .logo {
+        margin-left: 16.875%;
+    }
+
+    .header-top-bar .nav-ec {
+        right: 16.875%;
+    }
+
+    .slides-wrapper .page .pic-wrapper {
+        padding-bottom: 29.3125%;
+        background: url(../images/img-hd-banner-lg.jpg) no-repeat center center;
+        background-size: contain;
+    }
+}
+
+/*
+ * content section
+ */
+
+.site-content {
+    height: 2000px;
+    background: url(../images/img-bg-lg.jpg) repeat-y center top;
+    background-size: contain;
+}
+
+
+/*
+ * footer section
+ * */
+
+
+
+/*
+ * general use
+ */
+
+/*
+ * clearfix class - in HTML5 world it is the replacement to <div style="clear: both;"></div> 
+ * I borrow the code from html5boilerplate.com
+ */
+.group:before, .group:after {
+    content: " ";
+    display: table;
+}
+
+.group:after {
+    clear: both;
+}
+
+/*
+ * a general css used to hide labels that we don't want to show to users but still can be read by bot or screen readers
+ * */
+.hide-vis {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * hide text that we don't need on a button, but still keep it readable to screen reader
+ * This tag only hide the text of the element not hide the whole element like .hide-vis
+ * so we still can add child element into this element
+ */
+.hide-text {
+    text-indent: 200%; /* move the text out of visible area but still in the page which can be read by screen reader */
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.hide-block {
+    display: none;
+}
+
+
