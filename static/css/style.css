@@ -315,11 +315,383 @@ body {
  */
 
 .site-content {
-    height: 2000px;
+    height: 3000px;
     background: url(../images/img-bg-lg.jpg) repeat-y center top;
     background-size: contain;
 }
 
+
+/*sites map*/
+/* =========================================================== */
+.main-content{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.map-menu{
+    display: block;
+    width: 24.25%;
+    position: absolute;
+    top: 6.5em;
+}
+
+.map-menu ul{
+    display: block;
+
+}
+
+.map-menu ul li{
+    padding-top: 10px;
+    display: block;
+}
+
+.map-menu ul li button{
+    font-size: 1.5em;
+    height: 3.2em;
+    color: white;
+    background: transparent url(../images/img-menu-button.png) no-repeat center center;
+    background-size: contain;
+    text-align: center;
+    width: 100%;
+    border:0;
+}
+
+.map-menu ul li:first-child button{
+    background: transparent url(../images/img-menu-button-hl.png) no-repeat center center;
+    background-size: contain;
+    color: rgb(120,149,44);
+}
+
+.map-content{
+    display: block;
+    width: 70%;
+    background: url(../images/img-map-bg.png) no-repeat left top;
+    background-size: cover;
+    height: 51.75em;
+    position: absolute;
+    top: 7em;
+    left: 25%;
+}
+.map-content-wrapper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.map-title{
+    width: 88.44%;
+    height: 12.87%;
+    left: 5.78%;
+    position: absolute;
+    border-bottom-width: 2px;
+    border-bottom-style: dashed;
+    border-bottom-color: rgb(120,149,44); 
+}
+
+.map-title ul{
+    padding-top: 7%;
+}
+
+.map-title ul li{
+   color: rgb(120,149,44); 
+}
+
+.map-title ul li:not(:first-child){
+    display: inline-block;
+    padding-left: 12.9%;
+}
+
+.map-title ul li:first-child{
+    display: inline-block;
+    padding-left: 0%;
+    
+}
+
+.map-homepage{ 
+  color: rgb(120,149,44); 
+  padding-top: 6%;
+  left: 5.78%;
+  position: absolute;
+}
+
+.map-brand{
+    padding-top: 6%;
+    left: 25.78%;
+    position: absolute;
+}
+
+.map-care{
+    padding-top: 6%;
+    left: 51.77%;
+    position: absolute;
+}
+
+.map-baby{
+    padding-top: 6%;
+    left: 77.79%;
+    position: absolute;
+}
+
+.map-list li:first-child{
+    font-size: 1.3em;  
+    color: rgb(120,149,44); 
+    padding-bottom: 2.5em;
+    height: 2.5em;
+}
+
+.map-list  li:not(:first-child){
+    font-size: 1.2em;  
+    color: rgb(172,165,162); 
+    padding-bottom: 1em;
+}
+
+@media (min-width: 640px){
+    .map-title ul li{
+        font-size: 1.2em;
+    }
+}
+
+@media (min-width: 1080px){
+    .map-title ul li{
+        font-size: 1.4em;
+    }
+}
+/* =========================================================== */
+
+
+/*green power*/
+/* =========================================================== */
+.power-main-content{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-top: 20px;
+}
+
+.timeline{
+    display: block;
+    background: url(../images/img-timeline-bg.jpg) no-repeat left top;
+    background-size: cover;
+    width: 94.72%;
+    margin-left:2.64%;
+    height: 513px; /*513*/
+    top: 2.5em;
+    /*position: absolute;*/
+}
+
+.timeline-wrapper,.power-product-wrapper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.time-line-img{
+    /*top: 6.8%;*/
+    /*position: absolute;*/
+    width: 40%;
+    padding-top: 20px;
+    display: inline-block;
+    /*float: left;*/
+}
+
+.time-line-img img{
+    width: 100%;
+    float: left;
+}
+
+.timeline-title{
+    /*position: absolute;*/
+    display: inline-block;
+    width: 45.82%;
+    color: rgb(120,149,44); 
+    /*right: 7.5em;*/
+    left: 50%;
+    /*float: right;*/
+    padding-top: 20px;
+    vertical-align: top;
+}
+
+
+.timeline-title span{
+    color: rgb(229,137,27);
+}
+
+.timeline-subtitle{
+    /*position: absolute;*/
+    margin-top: 1em;
+}
+
+.timeline-subtitle ul li{
+    padding-bottom: 0.6em;
+}
+
+.timeline-subtitle ul li div:first-child{
+    float: left;
+}
+
+.timeline-subtitle ul li div:last-child{
+    margin-left: 2em;
+}
+
+@media (min-width: 1080px){
+    .timeline-subtitle ul li{
+        font-size: 1em;
+    }
+}
+
+
+.timeline-cradle{
+    /*position: absolute;
+    top: 55%;*/
+    width: 90%;
+    margin-left: 5%;
+    height: 5.5em;
+    border-style: dotted;
+    border-color: rgb(120,149,44); 
+    border-width: 2px;
+    border-radius: 5px;
+}
+
+.timeline-cradle div{
+      height: 1.17em;
+      padding-top: 2.165em;
+      /*position: absolute;*/
+}
+
+.timeline-cradle div:first-child{
+    float: left;
+    padding-left: 1.5em;
+    vertical-align: middle;
+}
+.timeline-cradle div:last-child h3{
+    color: rgb(120,149,44); 
+    margin-left: 3em;
+}
+
+.timeline-timeline{
+    width: 100%;
+    margin-top: 20px;
+}
+
+.timeline-line{
+    float: left;
+    width: 100%;
+    position: absolute;
+}
+.timeline-line-img{
+    width: 100%;
+    float: left;
+}
+
+.timeline-icon{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.timeline-icon ul{
+    width: 100%;
+}
+
+.timeline-icon .timeline-mother{
+    padding-left: 22.11%;
+    display: inline-block; 
+    width: 9.36%;
+}
+.timeline-icon .timeline-kid {
+    padding-left: 10%;
+    display: inline-block; 
+    width: 9.36%;
+}
+
+.timeline-image{
+    width: 100%;
+}
+
+.timeline-image img{
+    width: 100%;
+}
+
+.timeline-text{
+    color: rgb(120,149,44);
+    padding-top: 5%;
+    font-size: 1.4em;
+    width: 200%;
+    padding-left: 20%;
+}
+
+.power-product{
+    display: block;
+    background: url(../images/img-product-bg.png) no-repeat left top;
+    height: 670px; /*670*/
+    background-size: cover;
+    width: 100%;
+    top: 2.5em;
+}
+
+.power-product-series{
+    width: 23.02%;
+    top:10.3%;
+    left: 1.04%;
+    position: absolute;
+    text-align: center;
+}
+
+.power-product-series img,.power-prodcut-image img{
+    width: 100%;
+    float: left;
+}
+
+.power-prodcut-image{
+    width: 37.55%;
+    top: 26.88%;
+    left: 6%;
+    position: absolute;
+}
+
+.power-title{
+    position: absolute;
+    width: 61.63%;
+    left: 32.07%;
+    top: 10.42%;
+    color: rgb(120,149,44); 
+}
+
+.power-products{
+    width: 50%;
+    height: 60%;
+    top: 26.88%;
+    left: 46%;
+    position: absolute;
+}
+
+.power-products-wrapper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+
+.power-product-detail{
+    width: 28.05%;
+    display: inline-block;
+    padding-right: 20px;
+    padding-bottom: 10px;
+}
+
+.power-more{
+    right: 7.54%;
+    bottom: 7.46%;
+    position: absolute;
+}
+
+.power-more a{
+    font-size: 1.4em;
+    color: rgb(120,149,44); 
+}
+
+/* =========================================================== */
 
 /*
  * footer section
