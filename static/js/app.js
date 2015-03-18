@@ -31,4 +31,28 @@ $(function(){
 		}
 		
 	});
+
+	$(".notfound-btn").click(function(event) {
+		window.location.href = "index.html"
+	});
+
+	$(".timeline-person").bind('mouseenter', function(event) {
+		$(this).find($(".timeline-personText")).addClass('timeline-personTextHover');
+	}).bind('mouseleave',function(e){
+		$(this).find($(".timeline-personText")).removeClass('timeline-personTextHover');
+	});
+
+	$(".power-product-detail").bind('mouseenter', function(event) {
+		$(this).find($(".power-product-hover-wrapper")).css("display","block");
+	}).bind('mouseleave',function(e){
+		$(this).find($(".power-product-hover-wrapper")).css("display","none");
+	});
+
+	$(".product-product-detail").bind('mouseenter', function(event) {
+		$(this).find($(".power-product-hover-wrapper")).css("display","block");
+	}).bind('mouseleave',function(e){
+		$(this).find($(".power-product-hover-wrapper")).css("display","none");
+	});
+	
+
 });

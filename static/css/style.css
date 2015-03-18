@@ -571,6 +571,7 @@ body {
 
 .timeline-timeline{
     width: 100%;
+    height: 40%;
     margin-top: 20px;
 }
 
@@ -594,19 +595,69 @@ body {
     width: 100%;
 }
 
-.timeline-icon .timeline-mother{
-    padding-left: 22.11%;
+.timeline-person{
     display: inline-block; 
-    width: 9.36%;
+    width: 15.36%;
+    height: 100%;
+    position: absolute;
+}
+
+.timeline-icon .timeline-mother{
+    left: 15.11%;
+    
+}
+.timeline-icon .timeline-baby{
+    left: 40%;
+}
+.timeline-icon .timeline-kid {
+    left: 66%;
+}
+
+.timeline-personIcon{
+    width: 100%;
+    
+    /*position: absolute;*/
+}
+.timeline-personIcon img{
+    padding-left: 20%;
+}
+
+.timeline-personText{
+    color: rgb(120,149,44);
+    padding-top: 5%;
+    font-size: 1.4em;
+    height: 30%;
+    text-align: center;
+}
+
+.timeline-personTextHover{
+    font-size: 1.6em;
+    color: white;
+    background: url(../images/img-timeline-hover.png) no-repeat center top;
+    background-size: contain;
+    padding-top: 8%;
+    height: 40%;
+    text-align: center;
+}
+
+/*.timeline-icon .timeline-mother{
+    padding-left: 15.11%;
+    display: inline-block; 
+    width: 15.36%;
+    height: 100%;
+    position: absolute;
 }
 .timeline-icon .timeline-kid {
     padding-left: 10%;
     display: inline-block; 
-    width: 9.36%;
-}
+    width: 15.36%;
+    height: 100%;
+    position: absolute;
+}*/
 
 .timeline-image{
-    width: 100%;
+    width: 60%;
+    padding-left: 20%;
 }
 
 .timeline-image img{
@@ -617,8 +668,16 @@ body {
     color: rgb(120,149,44);
     padding-top: 5%;
     font-size: 1.4em;
-    width: 200%;
-    padding-left: 20%;
+    height: 30%;
+    text-align: center;
+}
+
+.timeline-text div{
+    height: 200%;
+    font-size: 1.6em;
+    color: white;
+    background: url(../images/img-timeline-hover.png) no-repeat center top;
+    background-size: contain;
 }
 
 .power-product{
@@ -644,8 +703,8 @@ body {
 }
 
 .power-prodcut-image{
-    width: 37.55%;
-    top: 26.88%;
+    width: 33.55%;
+    top: 33.88%;
     left: 6%;
     position: absolute;
 }
@@ -661,9 +720,52 @@ body {
 .power-products{
     width: 50%;
     height: 60%;
-    top: 26.88%;
-    left: 46%;
+    top: 33.88%;
+    left: 45%;
     position: absolute;
+}
+
+.power-title2{
+    position: absolute;
+    width: 65.63%;
+    left: 29.07%;
+    top: 10.42%;
+    color: rgb(120,149,44);
+}
+.power-title2 p{
+    font-size: 1.2em;
+}
+
+.power-product2list{
+    display: inline-block;
+}
+
+.power-product2list ul li{
+    display: inline-block;
+    padding-right: 3.75em;
+    font-size: 1.2em;
+}
+
+.power-product2list ul li:nth-child(3){
+    padding-right: 0.8em;
+}
+
+.power-title3{
+    position: absolute;
+    width: 65.63%;
+    left: 26.07%;
+    top: 8.42%;
+    color: rgb(120,149,44); 
+}
+
+.power-title3 p{
+    font-size: 1.5em;
+}
+
+@media (min-width: 640px) and (max-width: 1080px){
+    .power-title3 p{
+        font-size: 1.2em;
+    }
 }
 
 .power-products-wrapper{
@@ -674,21 +776,294 @@ body {
 }
 
 .power-product-detail{
-    width: 28.05%;
+    width: 26.05%;
+      display: inline-block;
+      margin-right: 20px;
+      margin-bottom: 10px;
+      position: relative;
+}
+
+.power-product-detail img{
+    width: 100%;
+}
+
+.power-product-detail span,.product-product-detail span{
+    color: rgb(120,149,44); 
+    font-size: 1.2em;
+}
+
+.prodcut-hover{
+      width: 100%;
+      height: 100%;
+      top: 0%;
+      display: inline-block;
+      position: absolute;
+      background-color: rgba(100,143,35,0.8);
+}
+
+.prodcut-hover ul{
+    width: 80%;
+  height: 60%;
+  position: absolute;
+  left: 10%;
+  top: 20%;
+}
+
+.prodcut-hover ul li{
+    padding-bottom: 10%;
+}
+
+.product-hover-icon{
+    width: 15%;
     display: inline-block;
-    padding-right: 20px;
-    padding-bottom: 10px;
+}
+
+.product-hover-text{
+    display: inline-block;
+
+}
+
+.product-hover-text a{
+    color: white;
+    text-decoration: underline;
+}
+
+.product-hover-content{
+    position: absolute;
+    background-color: rgba(100,143,35,0.8);
+    width: 200%;
+    left: 101%;
+    height: 150%;
+    top: 0%;
+    z-index: 5;
+}
+
+.product-hover-content div{
+    width: 80%;
+  left: 10%;
+  position: absolute;
+  top: 10%;
+  color: white;
+}
+
+.product-hover-content h2:last-child{
+    left: 0%;
 }
 
 .power-more{
     right: 7.54%;
-    bottom: 7.46%;
+    bottom: 2.46%;
     position: absolute;
 }
 
 .power-more a{
     font-size: 1.4em;
     color: rgb(120,149,44); 
+}
+
+/* product page*/
+/* =========================================================== */
+
+.product-content{
+    display: block;
+    width: 100%;
+    background: url(../images/img-map-bg.png) no-repeat left top;
+    background-size: contain;
+    height: 99.79em; /*1596*/
+    position: absolute;
+    top: 4em;
+}
+
+.product-nav{
+    /*background: url(../images/img-product-nav.png) no-repeat left top;
+    background-size: contain;*/
+    width: 30.56%;
+    /*height: 3.13%;*/
+    top:2.5%;
+    position: absolute;
+}
+
+.product-nav img{
+    width: 100%;
+    float: left;
+}
+
+.product-nav-backhome
+{
+   background: url(../images/img-product-homeBtn.png) no-repeat center center;
+    background-size: contain; 
+    width: 7.1%;
+    height: 44%;
+    top: 28%;
+    left: 3.71%;
+    position: absolute;
+}
+
+.product-nav-product{
+    position: absolute;
+    left: 26.69%;
+    top: 29.5%;
+}
+
+.product-nav-product a,.product-nav-detail a{
+    font-size: 1.1em;
+    color: white;
+    font-weight: normal;
+}
+
+.product-nav-detail{
+    position: absolute;
+    left: 62.57%;
+    top: 29.5%;
+}
+
+.product-titleImg{
+    width: 98%;
+    margin-left: 1%;
+    margin-top: 8.52%;
+}
+
+.product-titleImg img{
+    /*position: absolute;*/
+    width: 100%;
+}
+
+.product-products{
+    width: 98%;
+    margin-left: 1%;
+    margin-top:1em;
+    height: 47.67%;
+}
+
+.product-product-wrapper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.product-product-detail{
+    width: 20%;
+    margin-left: 4%;
+    margin-bottom: 2%;
+    display: inline-block;
+    position: relative;
+}
+
+.product-product-detail img{
+    width: 100%;
+}
+
+.product-product-hover{
+    position: absolute;
+    top: 0%;
+}
+
+.power-product-hover-wrapper{
+    display: none;
+}
+/* =========================================================== */
+
+
+/*404*/
+/* =========================================================== */
+.notfound-content{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url(../images/404.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.notfound-text{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    /*height: 50%;*/
+    color: white;
+    top: 53.61%;
+}
+
+.notfound-btn{
+    width: 15.12%;
+    left: 42.44%;
+    top: 66%;
+    position: absolute;
+}
+
+
+/*baby*/
+/* =========================================================== */
+.baby-main-content{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-top: 2.89%;
+}
+
+.baby-title-content{
+    display: block;
+    /*position: absolute;*/
+    background: url(../images/img-timeline-bg.jpg) no-repeat left top;
+    background-size: cover;
+    width: 94.72%;
+    margin-left:2.64%;
+    height: 513px; /*513*/
+    top: 2.5em;
+}
+
+.baby-title{
+    width: 70%;
+    margin-left: 3.58%;
+    padding-top: 5.89%;
+    color: rgb(120,149,44); 
+}
+
+.baby-title span{
+    color: rgb(229,137,27);
+}
+
+.baby-title-text{
+    width: 60%;
+    margin-top: 3.89%;
+    
+}
+
+.baby-title-text0{
+    color: rgb(120,149,44);  
+    margin-left: 3.58%;
+}
+
+.baby-title-textdot{
+    float: left;
+    padding-top: 0.5em;
+}
+.baby-title-textContent{
+    margin-left: 1.8em;
+}
+
+.baby-title-textContent p{
+    font-size: 1.5em;
+    line-height: 2.4em;
+    vertical-align: top;
+}
+
+.baby-baby-image{
+    position: absolute;
+    width: 44.42%;
+    left: 58.51%;
+  top: 18.93%;
+}
+
+.baby-artical-wrapper{
+    display: block;
+    /*position: absolute;*/
+    background: url(../images/img-timeline-bg.jpg) no-repeat center center;
+    background-size: cover;
+    width: 94.72%;
+    margin-left:2.64%;
+    margin-top:10px;
+    height: 1500px; /*513*/
+    top: 2.5em;
 }
 
 /* =========================================================== */
