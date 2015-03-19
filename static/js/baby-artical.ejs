@@ -1,0 +1,35 @@
+
+
+<%
+    for(var i=0;i<data.length;i++) {
+%>
+ <li>
+    <div class="baby-artical">
+        <div class="baby-artical-image">
+            <img src=<%=data[i].image%>>
+        </div>
+        <div class="baby-artical-text">
+            <div class="baby-artical-title">
+                <h2>欢乐童年</h2>
+                <p>嗳呵的父母不会给孩子太多的限制：他们会鼓励孩子多与大自然接触，与外界互动在孩子不同的成长阶段，带着孩子开阔视野勇敢尝试，锻炼孩子更加自主独立，从而更富有适应性。</p>
+            </div>
+            <div class="baby-artical-like">
+                <div class="baby-artical-likeImg">
+                    <img src="images/img-like.png" style="width:100%">
+                </div>
+                <div class="baby-artical-likeNo">
+                    <span>17</span>
+                </div>
+                <div class="baby-artical-commentImg">
+                    <img src="images/img-comment.png" style="width:100%">
+                </div>
+                <div class="baby-artical-commentNo">
+                    <span>220</span>
+                </div>
+            </div>
+        </div> 
+    </div>
+</li>
+<%
+}
+%>

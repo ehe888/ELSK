@@ -32,6 +32,22 @@ $(function(){
 		
 	});
 
+	var article = new EJS({url: 'js/baby-artical.ejs'}).render({"data":[{"image":"images/img-baby-article-image3.jpg"},{"image":"images/img-baby-article-image2.jpg"},{"image":"images/img-baby-article-image1.jpg"},{"image":"images/img-baby-article-image2.jpg"}]});
+	$(".baby-artical0-list").html(article);
+	$(".baby-artical1-list").html(article);
+	$(".baby-artical2-list").html(article);
+	
+	var product = new EJS({url: 'js/product.ejs'}).render();
+	$("#power-products0").html(product);
+	$("#power-products1").html(product);
+	$("#power-products2").html(product);
+
+	var product_series = new EJS({url: 'js/product-series.ejs'}).render({"number":8});
+	$("#product-productseries").html(product_series);
+
+
+	$(".baby-video-series").html(new EJS({url: 'js/baby-video-preview.ejs'}).render());
+
 	$(".notfound-btn").click(function(event) {
 		window.location.href = "index.html"
 	});
@@ -53,6 +69,8 @@ $(function(){
 	}).bind('mouseleave',function(e){
 		$(this).find($(".power-product-hover-wrapper")).css("display","none");
 	});
+
+
 	
 
 });

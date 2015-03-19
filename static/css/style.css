@@ -1054,16 +1054,165 @@ body {
   top: 18.93%;
 }
 
-.baby-artical-wrapper{
+.baby-artical-part{
     display: block;
     /*position: absolute;*/
     background: url(../images/img-timeline-bg.jpg) no-repeat center center;
     background-size: cover;
     width: 94.72%;
     margin-left:2.64%;
-    margin-top:10px;
+    margin-top:3%;
     height: 1500px; /*513*/
     top: 2.5em;
+    overflow-y: scroll;
+}
+
+.baby-artical-wrapper,.baby-video-content-wrapper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.baby-artical-wrapper h1{
+    color: rgb(120,149,44);  
+}
+
+.baby-empathy-titleDot{
+    width: 7%;
+    float: left;
+    margin-right: 5%;
+}
+
+.baby-empathy-subtitle p{
+    font-size: 1.5em;
+    color: rgb(120,149,44);  
+}
+
+.baby-empathy-titleDot img{
+    width: 100%;
+}
+
+.baby-artical-line,.baby-artical-line img{
+    width: 100%;
+}
+
+.baby-artical-title{
+    margin-left: 1%;
+}
+
+.baby-artical-empathy,.baby-artical-optimistic,.baby-artical-adaptation{
+    width: 29.88%;
+    top: 5%;
+    position: absolute;
+}
+
+.baby-artical-optimistic{
+    left: 33%;
+}
+
+.baby-artical-adaptation{
+    left: 66%;
+}
+
+.baby-empathy-title{
+    width: 100%;
+}
+
+.baby-empathy-titleDot div{
+    display: inline-block;
+    margin-left: 2%;
+}
+
+.baby-artical-empathy,.baby-artical-optimistic,.baby-artical-adaptation{
+    margin-left: 1.79%;
+}
+
+.baby-artical{
+    margin-top: 8%;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    border-color: rgb(120,149,44);  
+    background-color: white;
+}
+
+.baby-artical-image img{
+    width: 100%;
+}
+
+.baby-artical-text{
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 6%;
+}
+
+.baby-artical-title h2,.baby-artical-title p{
+    color: rgb(120,149,44); 
+    margin-top: 6%;
+
+}
+
+.baby-artical-likeImg,.baby-artical-commentImg{
+    width: 8%;
+    margin-top:5%;
+    display: inline-block;
+}
+
+.baby-artical-likeNo,.baby-artical-commentNo{
+    color: rgb(120,149,44); 
+    display: inline-block;
+    margin-right: 20%;
+    margin-top:5%;
+
+}
+.baby-artical-likeNo span,.baby-artical-commentNo span{
+    font-size: 1.4em;
+}
+.baby-video-content{
+    background: url(../images/img-video-bg.png) no-repeat center center;
+    background-size: cover;
+    margin-top: 5%;
+    width: 94.72%;
+    height: 9%;
+  margin-left: 2.64%;
+    display: block;
+}
+
+.baby-video-left{
+    width: 5.98%;
+    top:38%;
+    left: -2.5%;
+    position: absolute;
+}
+
+.baby-video-right{
+    width: 5.98%;
+    top:38%;
+    right: -2.5%;
+    position: absolute;
+}
+
+.baby-video-series{
+    height: 100%;
+    /*overflow-x:scroll;*/
+    overflow: auto;
+    /*background-color: black;*/
+
+}
+
+.baby-video-div{
+    width: 22.9%;
+    margin-top: 3.5%;
+    margin-left: 1.1%;
+    display: inline-block;
+    
+}
+
+.baby-video-brief{
+    margin-top: 8.5%;
+}
+.baby-video-brief p{
+  color: rgb(120,149,44);  
 }
 
 /* =========================================================== */
