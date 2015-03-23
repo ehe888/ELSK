@@ -47,6 +47,7 @@ $(function(){
 
 
 	$(".baby-video-series").html(new EJS({url: 'js/baby-video-preview.ejs'}).render());
+	$(".brand-video-series").html(new EJS({url: 'js/baby-video-preview.ejs'}).render());
 
 	$(".notfound-btn").click(function(event) {
 		window.location.href = "index.html"

@@ -1685,13 +1685,238 @@ input.pswInput {background-image: url(../images/img-login-psw.png);}
 
 .brand-origin{
     width: 100%;
+    text-align: center;
 }
 
-.brand-origin img{
+.brand-origin .brand-origin-image{
+    width: 100%;
+}
+.brand-origin-logo{
     position: absolute;
+    width: 56.14%;
+    left: 21.93%;
+    top: 3.19%;
+}
+
+.brand-origin-logo .brand-logo{
+    width: 32.56%;
+    margin-left: 33.59%;
+    display: block;
+}
+
+.brand-origin-title{
+    margin-top: 2%;
+}
+
+.brand-origin-logo span{
+    display: block;
+    color:rgb(120,149,44);
+    font-size: 1.4em;
+    margin-top: 7%; 
+}
+
+.brand-process{
+    width: 100%;
+    height: 16.04%; /*540*/
+    margin-top: 5%;
+}
+
+.brand-process-title,.brand-star-title,.brand-honor-title{
+    width: 38.75%;
+    margin-left: 30.625%;
+    margin-top: 2%;
+}
+
+.brand-process ul{
+    position: absolute;
+  top: 13.5%;
+  width: 100%;
+}
+
+.brand-process ul li{
+    display: inline-block;
+    width: 13.46%;
+    text-align: center;
+    font-size: 1.5em;
+    /*margin-left: 3%;*/
+    color:rgb(120,149,44);
+}
+
+.brand-process ul li:first-child{
+    margin-left: 8.35%;
+}
+
+
+.brand-process-line{
+    width: 88.36%;
+    left: 5.82%;
+    position: absolute;
+    top: 21.5%;
+}
+
+.brand-process-content{
+    width: 86.6%;
+    height: 66.29%;
+    left: 6.7%;
+    position: absolute;
+    top: 31%;
+}
+
+.brand-process-content h1{
+    text-align: center;
+    color:rgb(120,149,44);
+}
+
+.brand-process-content img{
+    width: 45.89%;
+    display: inline-block;
+}
+
+.brand-process-content  p{
+    color:rgb(120,149,44);
+    font-size: 1.3em;
+    display: inline-block;
+    position: absolute;
+    top: 25.7%;
+    width: 45%;
+    right: 10%;
+}
+
+.brand-process-arrow{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.brand-process-left{
+    position: absolute;
+    top: 55%;
+    left: 2.69%;
+}
+
+.brand-process-right{
+    position: absolute;
+    top: 55%;
+    right: 2.69%;
+}
+
+.brand-star{
+    height: 36.95%; /*1175*/
+}
+
+.brand-star-image{
+    position: absolute;
+    left: 0%;
     width: 100%;
 }
 
+.brand-star-text{
+    width: 47%;
+    top: 12.37%;
+    left: 6.35%;
+    position: absolute;
+}
+
+.brand-star-text p{
+    font-size: 1.3em;
+    color:rgb(120,149,44);
+}
+
+.brand-video-title{
+    font-size: 1.8em;
+    top: 45%;
+    left: 2.88%;
+    color:rgb(120,149,44);
+    position: absolute;
+}
+
+.brand-video-content{
+    background: url(../images/img-video-bg.png) no-repeat center center;
+    background-size: 100% 100%;
+    top:48.28%;
+    width: 100%;
+    height: 25.1%;
+    display: block;
+    position: absolute;
+}
+
+.brand-video-left{
+    width: 5.98%;
+    top:38%;
+    left: -2.5%;
+    position: absolute;
+}
+
+.brand-video-right{
+    width: 5.98%;
+    top:38%;
+    right: -2.5%;
+    position: absolute;
+}
+
+.brand-video-series{
+    height: 100%;
+    /*overflow-x:scroll;*/
+    overflow: auto;
+    /*background-color: black;*/
+
+}
+
+.brand-video-div{
+    width: 22.9%;
+    margin-top: 3.5%;
+    margin-left: 1.1%;
+    display: inline-block;
+    
+}
+
+.brand-pic-title{
+    font-size: 1.8em;
+    top: 76%;
+    left: 2.88%;
+    color:rgb(120,149,44);
+    position: absolute;
+}
+
+.brand-pic-content{
+    background: url(../images/img-video-bg.png) no-repeat center center;
+    background-size: 100% 100%;
+    top:79.28%;
+    width: 100%;
+    height: 18.55%;
+    display: block;
+    position: absolute;
+}
+
+.brand-pic-left{
+    width: 5.98%;
+    top:38%;
+    left: -2.5%;
+    position: absolute;
+}
+
+.brand-pic-right{
+    width: 5.98%;
+    top:38%;
+    right: -2.5%;
+    position: absolute;
+}
+
+.brand-pic-series{
+    height: 100%;
+    /*overflow-x:scroll;*/
+    overflow: auto;
+    /*background-color: black;*/
+
+}
+
+.brand-pic-div{
+    width: 22.9%;
+    margin-top: 3.5%;
+    margin-left: 1.1%;
+    display: inline-block;
+    
+}
 
 
 }
