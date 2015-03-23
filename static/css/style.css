@@ -366,13 +366,25 @@ body {
 .map-content{
     display: block;
     width: 70%;
-    background: url(../images/img-map-bg.png) no-repeat left top;
+    /*background: url(../images/img-map-bg.png) no-repeat left top;*/
     background-size: cover;
-    height: 51.75em;
+    /*height: 51.75em;*/
     position: absolute;
     top: 7em;
     left: 25%;
 }
+.map-content-bg{
+    /*position: absolute;*/
+    width: 100%;
+    float: left;
+}
+
+.map-content-main{
+      width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
 .map-content-wrapper{
     position: relative;
     width: 100%;
@@ -471,13 +483,17 @@ body {
 
 .timeline{
     display: block;
-    background: url(../images/img-timeline-bg.jpg) no-repeat left top;
+    /*background: url(../images/img-timeline-bg.jpg) no-repeat left top;*/
     background-size: cover;
     width: 94.72%;
     margin-left:2.64%;
     height: 513px; /*513*/
     top: 2.5em;
     /*position: absolute;*/
+}
+
+.timeline-img{
+    position: absolute;
 }
 
 .timeline-wrapper,.power-product-wrapper{
@@ -1353,13 +1369,13 @@ input.pswInput {background-image: url(../images/img-login-psw.png);}
 /*signup page*/
 /* =========================================================== */
 .signup-title-wrapper{
-    height: 16.38%;
+    height: 20.06%;
 }
 
 .signup-icon{
     position: absolute;
     width: 5.42%;
-    top: 5.5%;
+    top: 7.89%;
     left: 3.66%;
 }
 
@@ -1369,7 +1385,7 @@ input.pswInput {background-image: url(../images/img-login-psw.png);}
 
 .signup-title{
     position: absolute;
-    top: 7.32%;
+    top: 10.15%;
     left: 12.11%;
 }
 
@@ -1378,7 +1394,7 @@ input.pswInput {background-image: url(../images/img-login-psw.png);}
 }
 
 .signup-input-wrapper{
-    height: 34.42%;
+    height: 39.71%;
 }
 
 .signup-input-wrapper input{
@@ -1403,14 +1419,14 @@ input.pswInput {background-image: url(../images/img-login-psw.png);}
 .signup-username{
     /*position: absolute;*/
     margin-left: 3.66%;
-    height: 15.8%;
+    height: 13.13%;
 }
 
 .signup-other{
     /*position: absolute;*/
     margin-left: 3.66%;
     margin-top: 3.33%;
-    height: 15.8%;
+    height: 13.13%;
 }
 
 .phoneInput{
@@ -1426,16 +1442,22 @@ input.pswInput {background-image: url(../images/img-login-psw.png);}
 .signup-babyInfo{
     margin-top: 0%;
     margin-left: 3.66%;
+    height: 9.43%;
 }
 
 .signup-babyInfo h1{
     color: gray;
+    margin-left: 1%;
+    margin-bottom: 2%;
 }
 
 .signup-babyInfo div{
     display: inline-block;
     margin-top: 1%;
-    width: 20%;
+    padding-left: 1%;
+    width: 17%;
+    padding-top: 1.5%;
+  height: 50%;
 }
 
 .signup-babyInfo div span{
@@ -1445,6 +1467,7 @@ input.pswInput {background-image: url(../images/img-login-psw.png);}
 
 .signup-hasborn{
     margin-left: 0%;
+    background-color: #d6efb0;
 }
 
 .signup-baby-other{
@@ -1453,11 +1476,12 @@ input.pswInput {background-image: url(../images/img-login-psw.png);}
 
 .signup-baby-detail{
     margin-left: 3.66%;
-    margin-top: 2%;
-    height: 4%;
+    padding: 2% 1%;
+    height: 3%;
     width: 70%;
     background-color: #d6efb0;
 }
+
 
 .signup-baby-detail span{
     font-size: 1.8em;
@@ -1467,13 +1491,23 @@ input.pswInput {background-image: url(../images/img-login-psw.png);}
 
 .signup-baby-detail #signup_baby_birth{
     height: 85%;
-    width: 50%;
+    width: 30%;
     text-align: center;
     border-width: 1.5px;
     border-color: rgb(120,149,44); 
     border-style: solid;
     font-size: 1.8em;
     color: rgb(120,149,44); 
+}
+
+.signup-btns{
+    margin-top: 9.7%;
+}
+
+.signup-btns div{
+    width: 22.3%;
+    margin-left: 4.03%;
+    display: inline-block;
 }
 
 /* =========================================================== */
