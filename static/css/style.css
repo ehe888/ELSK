@@ -491,8 +491,8 @@ body {
 
 .timeline{
     display: block;
-    /*background: url(../images/img-timeline-bg.jpg) no-repeat left top;*/
-    background-size: cover;
+    background: url(../images/img-power-title-bg.png) no-repeat center center;
+    background-size: 100% 100%;
     width: 100%;
    /* height: 513px;*/ /*513*/
     top: 2.5em;
@@ -707,9 +707,9 @@ body {
 
 .power-product{
     display: block;
-    background: url(../images/img-power-bg.png) no-repeat left top;
+    background: url(../images/img-power-bg.png) no-repeat center center;
     height: 670px; /*670*/
-    background-size: cover;
+    background-size: 100% 100%;
     width: 100%;
     margin-top: 3.5em;
 }
