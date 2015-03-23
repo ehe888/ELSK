@@ -791,6 +791,13 @@ body {
     .power-title3 p{
         font-size: 1.2em;
     }
+    .power-title2 p{
+        font-size: 1em;
+    }
+
+    .power-product2list ul li{
+        font-size: 0.8em;
+    }
 }
 
 .power-products-wrapper{
@@ -1079,6 +1086,12 @@ body {
     vertical-align: top;
 }
 
+@media (min-width: 640px) and (max-width: 1080px){
+    .baby-title-textContent p{
+        font-size: 1.2em;
+    }
+}
+
 .baby-baby-image{
     position: absolute;
     width: 44.42%;
@@ -1089,11 +1102,11 @@ body {
 .baby-artical-part{
     display: block;
     /*position: absolute;*/
-    background: url(../images/img-timeline-bg.jpg) no-repeat center center;
-    background-size: cover;
+    background: url(../images/img-baby-content-bg.png) no-repeat center center;
+    background-size: 100% 100%;
     width: 100%;
     margin-top:3%;
-    height: 1500px; /*513*/
+    height: 1300px; /*513*/
     top: 2.5em;
     overflow-y: scroll;
 }
@@ -1203,9 +1216,8 @@ body {
     background: url(../images/img-video-bg.png) no-repeat center center;
     background-size: cover;
     margin-top: 5%;
-    width: 94.72%;
+    width: 100%;
     height: 9%;
-  margin-left: 2.64%;
     display: block;
 }
 
@@ -1480,6 +1492,8 @@ input.pswInput {background-image: url(../images/img-login-psw.png);}
     color: rgb(120,149,44); 
 }
 
+
+
 .signup-hasborn{
     margin-left: 0%;
     background-color: #d6efb0;
@@ -1523,6 +1537,15 @@ input.pswInput {background-image: url(../images/img-login-psw.png);}
     width: 22.3%;
     margin-left: 4.03%;
     display: inline-block;
+}
+
+@media (min-width: 640px) and (max-width: 1080px){
+    .signup-babyInfo div span{
+        font-size: 1.5em;
+    }
+    .signup-baby-detail span{
+        font-size: 1.5em;
+    }
 }
 
 /* =========================================================== */
