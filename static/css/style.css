@@ -446,10 +446,14 @@ body {
 }
 
 .map-list li:first-child{
-    font-size: 1.3em;  
-    color: rgb(120,149,44); 
     padding-bottom: 2.5em;
     height: 2.5em;
+    font-size: 1.3em; 
+}
+
+.map-list li:first-child a{
+    color: rgb(120,149,44); 
+    
 }
 
 .map-list  li:not(:first-child){
@@ -471,29 +475,34 @@ body {
 }
 /* =========================================================== */
 
+/*pc*/
+@media (min-width: 640px){
+
 
 /*green power*/
 /* =========================================================== */
 .power-main-content{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    padding-top: 20px;
+      position: relative;
+  width: 94.72%;
+  height: 100%;
+  margin-left: 2.64%;
+  padding-top: 20px;
 }
 
 .timeline{
     display: block;
     /*background: url(../images/img-timeline-bg.jpg) no-repeat left top;*/
     background-size: cover;
-    width: 94.72%;
-    margin-left:2.64%;
-    height: 513px; /*513*/
+    width: 100%;
+   /* height: 513px;*/ /*513*/
     top: 2.5em;
     /*position: absolute;*/
 }
 
 .timeline-img{
-    position: absolute;
+      position: absolute;
+  width: 100%;
+  float: left;
 }
 
 .timeline-wrapper,.power-product-wrapper{
@@ -587,7 +596,7 @@ body {
 
 .timeline-timeline{
     width: 100%;
-    height: 40%;
+    height: 13.5em;
     margin-top: 20px;
 }
 
@@ -698,11 +707,11 @@ body {
 
 .power-product{
     display: block;
-    background: url(../images/img-product-bg.png) no-repeat left top;
+    background: url(../images/img-power-bg.png) no-repeat left top;
     height: 670px; /*670*/
     background-size: cover;
     width: 100%;
-    top: 2.5em;
+    margin-top: 3.5em;
 }
 
 .power-product-series{
@@ -1011,7 +1020,8 @@ body {
 /* =========================================================== */
 .baby-main-content{
     position: relative;
-    width: 100%;
+    width: 94.72%;
+    margin-left:2.64%;
     height: 100%;
     padding-top: 2.89%;
 }
@@ -1019,12 +1029,18 @@ body {
 .baby-title-content{
     display: block;
     /*position: absolute;*/
-    background: url(../images/img-timeline-bg.jpg) no-repeat left top;
-    background-size: cover;
-    width: 94.72%;
-    margin-left:2.64%;
-    height: 513px; /*513*/
+    background: url(../images/img-baby-title-bg.png) no-repeat center center;
+    background-size: 100% 100%;
+    width: 100%;
+    /*height: 513px; /*513*/
     top: 2.5em;
+    height: 38.5em;
+}
+
+.baby-title-img {
+    position: absolute;
+    width: 100%;
+    float: left;
 }
 
 .baby-title{
@@ -1075,8 +1091,7 @@ body {
     /*position: absolute;*/
     background: url(../images/img-timeline-bg.jpg) no-repeat center center;
     background-size: cover;
-    width: 94.72%;
-    margin-left:2.64%;
+    width: 100%;
     margin-top:3%;
     height: 1500px; /*513*/
     top: 2.5em;
@@ -1511,6 +1526,8 @@ input.pswInput {background-image: url(../images/img-login-psw.png);}
 }
 
 /* =========================================================== */
+}
+
 
 /*
  * footer section
