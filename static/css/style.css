@@ -321,6 +321,11 @@ body {
 }
 
 
+
+
+/*pc*/
+@media (min-width: 640px){
+
 /*sites map*/
 /* =========================================================== */
 .main-content{
@@ -474,10 +479,6 @@ body {
     }
 }
 /* =========================================================== */
-
-/*pc*/
-@media (min-width: 640px){
-
 
 /*green power*/
 /* =========================================================== */
@@ -1548,9 +1549,19 @@ input.pswInput {background-image: url(../images/img-login-psw.png);}
     }
 }
 
+.signup-success-content{
+    background: url(../images/img-sitemap-bg.png) no-repeat center center;
+    width: 100%;
+    position: absolute;
+    top: 3%;
+    background-size: 100% 100%;
+}
+
 /* =========================================================== */
 }
 
+/* ========================================================================================================================== */
+/*pc end*/
 
 /*
  * footer section
