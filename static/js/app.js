@@ -42,8 +42,12 @@ $(function(){
 	$("#power-products1").html(product);
 	$("#power-products2").html(product);
 
-	var product_series = new EJS({url: 'js/product-series.ejs'}).render({"number":8});
+	var product_series = new EJS({url: 'js/product-series.ejs'}).render({"number":11});
 	$("#product-productseries").html(product_series);
+	$("#search-productseries").html(product_series);
+
+	var storeList = new EJS({url: 'js/stores.ejs'}).render();
+	$("#store_list").html(storeList);
 
 
 	$(".baby-video-series").html(new EJS({url: 'js/baby-video-preview.ejs'}).render());
