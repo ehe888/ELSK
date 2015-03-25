@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
          -->
         <link href='css/style.css' rel='stylesheet' />
+        <link href="css/datepicker.css" rel="stylesheet"/>
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -114,16 +115,21 @@
                                     </div>
                                 </div>
                                 <div class="signup-baby-detail">
-                                    <span>宝宝生日：</span>
-                                    <input type="datetime" id="signup_baby_birth">
-                                    <span style="margin-left: 3.5%">宝宝性别：</span>
-                                    <input type="radio" id="signup_male">
-                                    <span>男</span>
-                                    <input type="radio" id="signup_female">
-                                    <span>女</span>
-                                    <div class="signup-datepicker">
+                                    <div class="wrapper">
+                                        <div class="signup-baby-input">
+                                            <span>宝宝生日：</span>
+                                            <input type="datetime" id="signup_baby_birth">
+                                            <span style="margin-left: 3.5%">宝宝性别：</span>
+                                            <input type="radio" id="signup_male">
+                                            <span>男</span>
+                                            <input type="radio" id="signup_female">
+                                            <span>女</span>
+                                        </div>
+                                        <div class="signup-datepicker">
+                                        </div>
                                     </div>
                                 </div>
+                                <div></div>
                                 <div class="signup-btns">
                                     <div class="signup-btn">
                                         <img src="images/img-signup-btn.png">
@@ -132,6 +138,7 @@
                                         <img src="images/img-login-btn.png">
                                     </div>
                                 </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -162,8 +169,15 @@
             <div class="site-footer"></div>
         </div>
 
+        <script type="text/javascript" src="js/prototype.js"></script>
         <script src="js/jquery-1.11.1.js"></script> 
-        <script src="js/app.js"></script>
+        <script type="text/javascript" src="js/jquery-ui.js"></script>
+        <script src="js/ejs_production.js"></script>
+        <script type="text/javascript" src="js/effects.js"></script>
+        <script type="text/javascript" src="js/showcase.js"></script>
+        <script type="text/javascript" src="js/jquery.event.ue.js"></script>
+        <script type="text/javascript" src="js/jquery.udraggable.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
 <!-- 
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
          -->

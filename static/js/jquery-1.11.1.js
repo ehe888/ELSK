@@ -10306,3 +10306,4 @@ if ( typeof noGlobal === strundefined ) {
 return jQuery;
 
 }));
+jQuery.noConflict(); 
