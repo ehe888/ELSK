@@ -2501,6 +2501,497 @@ input.pswInput {background-image: url(../images/img-login-psw.png);}
     display: none;
 }
 
+
+
+
+/* product page*/
+/* =========================================================== */
+.product-content{
+    display: block;
+    width: 100%;
+    background: url(../images_mobile/img-bg-lg.jpg) no-repeat center center;
+    background-size: 100% 100%;
+    /*height: 99.79em;*/ /*1596*/
+    position: absolute;
+    top: 1em;
+}
+
+.product-nav{
+    /*background: url(../images/img-product-nav.png) no-repeat left top;
+    background-size: contain;*/
+    width: 57.03%; /*365px*/
+    /*height: 3.13%;*/
+    top:1%;
+    left: 7.66%;
+    position: absolute;
+}
+
+.product-nav img{
+    width: 100%;
+    float: left;
+}
+
+.product-nav-backhome
+{
+   background: url(../images/img-product-homeBtn.png) no-repeat center center;
+    background-size: contain; 
+    width: 7.1%;
+    height: 44%;
+    top: 28%;
+    left: 5.31%;
+    position: absolute;
+}
+
+.product-nav-product{
+    position: absolute;
+    left: 25.69%;
+    top: 21.5%;
+}
+
+.product-nav-product a,.product-nav-detail a{
+    font-size: 1em;
+    color: white;
+    font-weight: normal;
+}
+
+.product-nav-detail{
+    position: absolute;
+    left: 58.57%;
+    top: 21.5%;
+}
+
+
+.product-titleImg{
+    width: 84.68%; /*542/640*/
+    margin-left: 7.66%;
+    margin-top: 21.52%;
+}
+
+.product-titleImg img{
+    /*position: absolute;*/
+    width: 100%;
+}
+
+
+.product-products{
+    width: 92%;
+    margin-left: 8.26%;
+    margin-top: 2em;
+    height: 47.67%;
+}
+
+.product-product-wrapper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.product-product-detail{
+    width: 41%;/*290px*/
+    margin-right: 7.6%;
+    margin-bottom: 24%;
+    display: inline-block;
+    position: relative;
+}
+
+.product-product-detail img{
+    width: 100%;
+    /*border: solid 2px rgb(120,149,44);*/
+    outline: rgb(120,149,44) solid 1px;
+}
+
+.product-product-detail span{
+    position: absolute;
+    padding-top: 0.8em;
+    color: rgb(120,149,44); 
+    font-size: 1.5em;
+}
+
+.power-product-hover-wrapper{
+    display: none;
+}
+
+/*green power*/
+/* =========================================================== */
+.power-main-content{
+      position: relative;
+  width: 94.72%;
+  height: 100%;
+  margin-left: 2.64%;
+  padding-top: 20px;
+}
+
+.timeline{
+    display: block;
+    /*background: url(../images/img-power-title-bg.png) no-repeat center center;*/
+    background-size: 100% 100%;
+    width: 100%;
+   /* height: 513px;*/ /*513*/
+    top: 2.5em;
+    /*position: absolute;*/
+}
+
+.timeline-img{
+    position: absolute;
+    width: 100%;
+    float: left;
+}
+
+.timeline-wrapper,.power-product-wrapper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.time-line-img{
+    /*top: 6.8%;*/
+    /*position: absolute;*/
+    width: 89.4%;
+    padding-top: 5%;
+    padding-left: 5%;
+    display: inline-block;
+    /*float: left;*/
+}
+
+.time-line-img img{
+    width: 100%;
+    float: left;
+}
+
+.timeline-title{
+    /*position: absolute;*/
+    display: inline-block;
+    width: 85.82%;
+    color: rgb(120,149,44); 
+    /*right: 7.5em;*/
+    padding-left: 5%;
+    /*float: right;*/
+    padding-top: 2%;
+    vertical-align: top;
+}
+
+.timeline-title h1{
+    font-size: 1.4em;
+}
+
+.timeline-title span{
+    color: rgb(229,137,27);
+}
+
+.timeline-subtitle{
+    /*position: absolute;*/
+    margin-top: 1em;
+}
+.timeline-subtitle h2{
+    font-size: 1.1em;
+}
+
+.timeline-subtitleDot img{
+    width: 80%;
+}
+.timeline-subtitle ul li{
+    padding-bottom: 0.6em;
+}
+
+.timeline-subtitle ul li div:first-child{
+    float: left;
+    padding-top: 1%;
+}
+
+.timeline-subtitle ul li div:last-child{
+    margin-left: 2em;
+}
+
+.timeline-cradle{
+    /*position: absolute;
+    top: 55%;*/
+    width: 90%;
+    margin-left: 5%;
+    height: 5.5em;
+    border-style: dotted;
+    border-color: rgb(120,149,44); 
+    border-width: 2px;
+    border-radius: 5px;
+}
+.timeline-cradle h3{
+    font-size: 1em;
+}
+.timeline-cradle div{
+      height: 1.17em;
+      padding-top: 1.85em;
+      /*position: absolute;*/
+}
+
+.timeline-cradle div:first-child{
+    float: left;
+    padding-left: 1em;
+    padding-top: 2em;
+    vertical-align: middle;
+}
+.timeline-cradle div:last-child h3{
+    color: rgb(120,149,44); 
+    margin-left: 3em;
+}
+
+.timeline-timeline{
+    width: 100%;
+    height: 13.5em;
+    margin-top: 20px;
+}
+
+.timeline-line{
+    float: left;
+    width: 100%;
+    position: absolute;
+}
+.timeline-line-img{
+    width: 100%;
+    float: left;
+    padding-top: 2.5em;
+}
+
+.timeline-icon{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.timeline-icon ul{
+    width: 100%;
+}
+
+.timeline-person{
+    display: inline-block; 
+    width: 25%;
+    height: 100%;
+    position: absolute;
+}
+
+.timeline-icon .timeline-mother{
+    left: 5.11%;
+    
+}
+.timeline-icon .timeline-baby{
+    left: 38%;
+}
+.timeline-icon .timeline-kid {
+    left: 70%;
+}
+
+.timeline-personIcon{
+    width: 90%;
+    left: 5%;
+    position: relative;
+}
+.timeline-personIcon img{
+    padding-left: 0%;
+}
+
+.timeline-personText{
+    color: rgb(120,149,44);
+    padding-top: 5%;
+    font-size: 1.1em;
+    height: 30%;
+    text-align: center;
+}
+
+.timeline-personTextHover{
+    font-size: 1.3em;
+    color: white;
+    background: url(../images/img-timeline-hover.png) no-repeat center top;
+    background-size: contain;
+    padding-top: 8%;
+    height: 40%;
+    text-align: center;
+}
+
+.power-product{
+    display: block;
+    /*background: url(../images/img-power-bg.png) no-repeat center center;*/
+    height: 67em; /*670*/
+    background-size: 100% 100%;
+    width: 100%;
+    /*margin-top: 3.5em;*/
+}
+
+.power-product2{
+    margin-top: -20%;
+}
+
+
+
+.power-product-series{
+    width: 38.42%;
+    top:1.3%;
+    left: 4.04%;
+    position: absolute;
+    text-align: center;
+    z-index: 1;
+}
+
+.power-product-series img,.power-prodcut-image img{
+    width: 100%;
+    float: left;
+}
+
+.power-prodcut-image{
+    width: 87.55%;
+    top: 0%;
+    left: 6%;
+    position: absolute;
+}
+
+.power-title{
+    position: relative;
+    width: 87.55%;
+    left: 6.07%;
+    top: 20em;
+    color: rgb(120,149,44); 
+}
+
+.power-products{
+    width: 89.55%;
+    height: 24%;
+    top: 30.88%;
+    left: 6%;
+    overflow: hidden;
+    position: relative;
+}
+
+.power-title2{
+    position: relative;
+    width: 87.55%;
+    left: 6.07%;
+    top: 20em;
+    color: rgb(120,149,44);
+}
+.power-title2 p{
+    font-size: 1.2em;
+}
+
+.power-product2list{
+    display: inline-block;
+}
+
+.power-product2list ul li{
+    display: inline-block;
+    padding-right: 3.75em;
+    font-size: 1.2em;
+}
+
+.power-product2list ul li:nth-child(3){
+    padding-right: 0.8em;
+}
+
+.power-title3{
+    position: relative;
+    width: 87.55%;
+    left: 6.07%;
+    top: 20em; 
+    color: rgb(120,149,44); 
+}
+
+.power-title3 p{
+    font-size: 1.5em;
+}
+
+.power-products-wrapper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+
+.power-product-detail{
+    width: 43%;
+    margin-right: 6%;
+    margin-bottom: 3%;
+    display: inline-block;
+    position: relative;
+}
+
+.power-product-detail img{
+    width: 100%;
+}
+
+.power-product-detail span,.product-product-detail span{
+    color: rgb(120,149,44); 
+    font-size: 1.2em;
+}
+
+.prodcut-hover{
+      width: 100%;
+      height: 100%;
+      top: 0%;
+      display: inline-block;
+      position: absolute;
+      background-color: rgba(100,143,35,0.8);
+}
+
+.prodcut-hover ul{
+    width: 80%;
+  height: 60%;
+  position: absolute;
+  left: 10%;
+  top: 20%;
+}
+
+.prodcut-hover ul li{
+    padding-bottom: 10%;
+}
+
+.product-hover-icon{
+    width: 15%;
+    display: inline-block;
+}
+
+.product-hover-text{
+    display: inline-block;
+
+}
+
+.product-hover-text a{
+    color: white;
+    text-decoration: underline;
+}
+
+.product-hover-content{
+    position: absolute;
+    background-color: rgba(100,143,35,0.8);
+    width: 200%;
+    left: 101%;
+    height: 150%;
+    top: 0%;
+    z-index: 5;
+}
+
+.product-hover-content div{
+    width: 80%;
+  left: 10%;
+  position: absolute;
+  top: 10%;
+  color: white;
+}
+
+.product-hover-content h2:last-child{
+    left: 0%;
+}
+
+.power-more{
+    right: 10.625%;
+    bottom: 16.46%;
+    width: 78.75%;/*504px*/
+    /*background-image: url(../images_mobile/more_btn.jpg);*/
+    position: absolute;
+}
+
+.power-more2, .power-more3{
+    bottom: 6%;
+}
+.power-more a{
+    display: none;
+}
+
 }
 
 
