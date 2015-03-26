@@ -11,6 +11,24 @@ function resize(){
 	});
 }
 
+function IsMobile (){
+    if (window.screen.width <= 640) {
+        return true;
+    }
+    else {
+        return false;
+    }
+
+}
+
+function adaptive(){
+    var w = $(window).width();
+    $("body").css("font-size", 62.5 * w  / 320+"%");
+}
+
+//字体自适应
+window.onresize=adaptive;
+
 
 $(function(){
 	// resize();
@@ -18,6 +36,17 @@ $(function(){
 	// $(window).resize(function(){
 	// 	resize();
 	// });
+	if(IsMobile()==true){
+		adaptive();
+		// product1 bg
+		$(".product-titleImg").find("img").attr("src","images_mobile/img-product-img.jpg");
+		$(".power-prodcut-image").find("img").attr("src","images_mobile/img-product-image.jpg");
+		$(".power-more").append("<img></img>");
+		$(".power-more").find("img").attr("src","images_mobile/more_btn.jpg","width","100%");
+		$(".power-more").click(function(){
+			window.location.href = "product1.html";
+		}) 
+	}
 
 	$("#navIcon").click(function(e){
 		e.preventDefault();
@@ -37,11 +66,14 @@ $(function(){
 	$(".baby-artical1-list").html(article);
 	$(".baby-artical2-list").html(article);
 	
+
+
 	var product = new EJS({url: 'js/product.ejs'}).render();
 	$("#power-products0").html(product);
 	$("#power-products1").html(product);
 	$("#power-products2").html(product);
 
+	
 	var product_series = new EJS({url: 'js/product-series.ejs'}).render({"number":11});
 	$("#product-productseries").html(product_series);
 	$("#search-productseries").html(product_series);
