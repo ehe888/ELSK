@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
          -->
         <link href='css/style.css' rel='stylesheet' />
+        <link href="css/datepicker.css" rel="stylesheet"/>
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -60,7 +61,7 @@
                         </form>
                     </div>
                 </div>
-                <div class="header-banner">
+                <div class="header-banner" style="display: none">
                     <div id="slider1">
                         <div class="slides-wrapper">
                             <div class="page">
@@ -121,7 +122,101 @@
             </div>
             <div class="site-content">
                 <div class="main-content">
-                    <div class="home-step">
+                    <div class="signup-content">
+                        <img src="images/img-signup-bg.png">
+                        <div class="login-div">
+                            <div class="login-wrapper">
+                                <div class="signup-title-wrapper">
+                                    <div class="signup-icon">
+                                        <img src="images/img-login-tm.png">
+                                    </div>
+                                    <div class="signup-title">
+                                        <h1>首次注册登录赢天猫优惠券！</h1>
+                                    </div>
+                                </div>
+                                <div class="signup-input-wrapper">
+                                    <input type="text" class="signupInput emailInput signup-username aiheInput" id="emailInput" placeholder="邮箱">
+                                    <span id="username_wrong" class="signup-wrong-text">邮箱错误</span>
+                                    <input type="text" class="signupInput phoneInput signup-other aiheInput" placeholder="手机">
+                                    <span id="mobile_wrong" class="signup-wrong-text">手机错误</span>
+                                    <input type="text" class="signupInput pswInput signup-other aiheInput" placeholder="密码">
+                                    <span id="pwd_wrong" class="signup-wrong-text">密码错误</span>
+                                    <input type="text" class="signupInput pswInput signup-other aiheInput" placeholder="重复密码">
+                                    <span id="pwd_repeat_wrong" class="signup-wrong-text">密码不一致</span>
+                                </div>
+                                <div class="signup-babyInfo">
+                                    <h1>宝宝信息：</h1>
+                                    <div class="signup-hasborn">
+                                        <input type="radio" id="signup_hasbord" class="signup_radio">
+                                        <label for="signup_hasbord"></label>
+                                        <span>宝宝已出生</span>
+                                    </div>
+                                    <div class="signup-pregnant signup-baby-other">
+                                        <input type="radio" id="signup_pregnant" class="signup_radio">
+                                        <label for="signup_pregnant"></label>
+                                        <span>正在怀孕中</span>
+                                    </div>
+                                    <div class="signup-ready-pregnant signup-baby-other">
+                                        <input type="radio" id="signup_readypregnant" class="signup_radio">
+                                        <label for="signup_readypregnant"></label>
+                                        <span>准备怀孕</span>
+                                    </div>
+                                    <div class="signup-notborn-other signup-baby-other">
+                                        <input type="radio" id="signup_notborn_other" class="signup_radio">
+                                        <label for="signup_notborn_other"></label>
+                                        <span>其他</span>
+                                    </div>
+                                </div>
+                                <div class="signup-baby-detail">
+                                    <div class="wrapper">
+                                        <div class="signup-baby-input">
+                                            <span>宝宝生日：</span>
+                                            <input type="datetime" id="signup_baby_birth">
+                                            <span style="margin-left: 3.5%">宝宝性别：</span>
+                                            <input type="radio" id="signup_male" class="signup_sex_radio">
+                                            <label for="signup_male"></label>
+                                            <span>男</span>
+                                            <input type="radio" id="signup_female" class="signup_sex_radio">
+                                            <label for="signup_female"></label>
+                                            <span>女</span>
+                                        </div>
+                                        <div class="signup-datepicker">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="signup-btns">
+                                    <div class="signup-btn">
+                                        <img src="images/img-signup-btn.png">
+                                    </div>
+                                    <div class="signup-login">
+                                        <img src="images/img-login-btn.png">
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="signup-success-content">
+                        <div class="wrapper">
+                            <div class="signup-success-title">
+                                <img src="images/img-signup-success-title.png">
+                                <h1>恭喜，注册成功！</h1>
+                            </div>
+                            <div class="signup-success-tm">
+                                <img src="images/img-tm-coupon.png">
+                            </div>
+                            <div class="signup-success-vline">
+                            </div>
+                            <div class="signup-success-tmqr">
+                                <img src="images/img-tm-qr.png">
+                                <div class="signup-success-tb">
+                                    <span>淘宝扫一扫</span>
+                                </div>
+                                
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -189,8 +284,16 @@
             </div>
         </div>
 
+        <script type="text/javascript" src="js/prototype.js"></script>
         <script src="js/jquery-1.11.1.js"></script> 
-        <script src="js/app.js"></script>
+        <script type="text/javascript" src="js/jquery-ui.js"></script>
+        <script src="js/ejs_production.js"></script>
+        <script type="text/javascript" src="js/effects.js"></script>
+        <script type="text/javascript" src="js/showcase.js"></script>
+        <script type="text/javascript" src="js/jquery.event.ue.js"></script>
+        <script type="text/javascript" src="js/jquery.udraggable.js"></script>
+        <script type="text/javascript" src="js/jquery.html5-placeholder-shim.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
 <!-- 
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
          -->
