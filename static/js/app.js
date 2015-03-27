@@ -7,8 +7,8 @@ function resize(){
 		}else{
 			$(this).height($(window).width() * 470.0 / 1600);
 		}
-		
 	});
+
 }
 
 
@@ -152,12 +152,39 @@ jQuery(document).ready(function($){
 			showOtherMonths:true,
 			yearRange: "c-10:c",
 			defaultDate:0,
+			dateFormat:'yy-mm-dd',
 			onSelect:function(date){
 				$("#signup_baby_birth").val(date);
 				$( ".signup-datepicker").css("display","none");
 			}
 		});
 	};
+
+	//注册页面逻辑
+	$(".signup_radio").change(function(event) {
+		$(".signup_radio").each(function() {
+			$(this).prop("checked",false);
+			$(this).parent().css('background-color', 'transparent');
+		});
+		$(this).prop("checked",true);
+		$(this).parent().css('background-color', '#d6efb0');
+		$(this).attr("id") == "signup_hasbord"?$(".signup-baby-detail").css("display","block"):$(".signup-baby-detail").css("display","none");
+
+	});
+
+	$(".aiheInput").bind('focus', function(event) {
+		$(this).css({
+			'border-color':'#78952c',
+			'color': '#78952c'
+		});
+		$(this).addClass('aiheiInputFouce');
+	}).bind('focusout', function(event) {
+		$(this).css({
+			'border-color':'#ababab',
+			'color': '#ababab'
+		});
+		$(this).removeClass('aiheiInputFouce');
+	});
 
 	
 	$("#signup_baby_birth").bind('focus',function(e){
@@ -228,7 +255,7 @@ jQuery(document).ready(function($){
 		});
 	}
 
-	
+
 
 	//品牌页面 历程逻辑
 	$(".img-brand-process-dot").click(function(event) {
@@ -253,6 +280,16 @@ jQuery(document).ready(function($){
 		honorSlide.animate(direction);
 	}
 
+	$(".brand-video-flash").scrollFollow({
+		container:'brand_video_overlay',
+		offsetTop:400
+	});
+
+	$(".brand-pic-big").scrollFollow({
+		container:'brand_pic_overlay',
+		offsetTop:530
+	});
+	
 	
 	
 

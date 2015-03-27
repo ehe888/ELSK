@@ -44,7 +44,7 @@
 		
 		// 'box' is the object to be animated
 		var position = box.css( 'position' );
-		console.log(position);
+		
 		function ani()
 		{		
 			// The script runs on every scroll which really means many times during a scroll.
@@ -55,8 +55,8 @@
 			var viewportHeight = parseInt( $( window ).height() );	
 			var pageScroll =  parseInt( $( document ).scrollTop() );
 			var parentTop =  parseInt( box.cont.offset().top );
-			var parentHeight = parseInt( box.cont.attr( 'offsetHeight' ) );
-			var boxHeight = parseInt( box.attr( 'offsetHeight' ) + ( parseInt( box.css( 'marginTop' ) ) || 0 ) + ( parseInt( box.css( 'marginBottom' ) ) || 0 ) );
+			var parentHeight = parseInt( box.cont.height() );
+			var boxHeight = parseInt( box.height() + ( parseInt( box.css( 'marginTop' ) ) || 0 ) + ( parseInt( box.css( 'marginBottom' ) ) || 0 ) );
 			var aniTop;
 			
 			// Make sure the user wants the animation to happen
@@ -181,11 +181,10 @@
 		{
 			box.cont = $( '#' + options.container );
 		}
-		
 		// Finds the default positioning of the box.
-		box.initialOffsetTop =  parseInt( box.offset().top );
+		// box.initialOffsetTop =  parseInt( box.offset().top );
+		box.initialOffsetTop = options.offsetTop;
 		box.initialTop = parseInt( box.css( 'top' ) ) || 0;
-		
 		// Hack to fix different treatment of boxes positioned 'absolute' and 'relative'
 		if ( box.css( 'position' ) == 'relative' )
 		{

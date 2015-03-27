@@ -315,9 +315,9 @@ body {
  */
 
 .site-content {
-    height: 3000px;
+    /*height: 3600px;*/ 
     background: url(../images/img-bg-lg.jpg) repeat-y center top;
-    background-size: contain;
+    background-size: 100%;
 }
 
 
@@ -325,6 +325,62 @@ body {
 
 /*pc*/
 @media (min-width: 640px){
+
+.site-nav{
+    width: 100%;
+    height: 25%;
+    background: url(../images/img-site-nav-bg.jpg) no-repeat center center;
+    background-size: 100% 100%;
+    position: relative;
+}
+
+.site-nav-content{
+    width: 100%;
+}
+
+.site-nav li{
+    display: inline-block;
+}
+
+@media (min-width: 640px) and (max-width: 1000px){
+    .site-nav li{
+        width: 13%;
+    }
+
+    .site-nav li.site-nav-signup,.site-nav li.site-nav-login{
+        width: 7%;
+    }
+
+    .site-nav li.site-nav-search{
+        width: 20%;
+    }
+}
+
+.site-nav li div{
+    width: 80%;
+    height: 100%;
+}
+
+.site-nav li:first-child{
+    margin-left: 2.6%;
+}
+
+#site-nav-search{
+    background: url(../images/img-nav-search.png) no-repeat center center;
+    background-size: 100% 100%;
+    height: 25px;
+    border-color: transparent; 
+    border-style: solid;
+    outline: none;
+    padding-left: 5%;
+    padding-top: 3px;
+    color:#b8814b;
+}
+
+
+.site-nav-signup{
+    margin-left: 2%;
+}
 
 .wrapper{
     position: relative;
@@ -338,6 +394,19 @@ body {
     width: 100%;
     height: 100%;
     position: relative;
+    max-width: 1060px;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 150px;
+}
+
+.sitemap-main-content{
+    width: 100%;
+    height: 1000px;
+    position: relative;
+    max-width: 1060px;
+    margin: auto;
+    padding-top: 20px;
 }
 
 .map-menu{
@@ -495,10 +564,11 @@ body {
 /*green power*/
 /* =========================================================== */
 .power-main-content{
-      position: relative;
-  width: 94.72%;
+  position: relative;
+  width: 100%;
   height: 100%;
-  margin-left: 2.64%;
+  max-width: 1060px;
+  margin: auto;
   padding-top: 20px;
 }
 
@@ -915,8 +985,6 @@ body {
     width: 100%;
     background: url(../images/img-map-bg.png) no-repeat center center;
     background-size: 100% 100%;
-    /*height: 99.79em;*/ /*1596*/
-    position: absolute;
     top: 4em;
 }
 
@@ -964,6 +1032,7 @@ body {
 }
 
 .product-titleImg{
+    padding-top: 1%;
     width: 98%;
     margin-left: 1%;
     margin-top: 8.52%;
@@ -1042,8 +1111,9 @@ body {
 /* =========================================================== */
 .baby-main-content{
     position: relative;
-    width: 94.72%;
-    margin-left:2.64%;
+    width: 100%;
+    max-width: 1060px;
+    margin: auto;
     height: 100%;
     padding-top: 2.89%;
 }
@@ -1236,7 +1306,6 @@ body {
     background-size: 100% 100%;
     margin-top: 5%;
     width: 100%;
-    height: 9%;
     display: block;
 }
 
@@ -1265,6 +1334,7 @@ body {
 .baby-video-div{
     width: 22.9%;
     margin-top: 2.5%;
+    margin-bottom: 2.5%;
     margin-left: 1.1%;
     display: inline-block;  
 }
@@ -1361,18 +1431,17 @@ body {
 
 .login-content{
     width: 100%;
-    position: absolute;
     top:2%;
 }
 
 .login-content img{
     width: 100%;
-    float: left;
 }
 .login-div{
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 89%;
+      top: 0%;
 }
 
 .login-wrapper{
@@ -1434,19 +1503,26 @@ input.loginInput {
     background-repeat: no-repeat;
     background-position: 0% center;
     background-size: contain;
-    border:1px solid #999;
-    padding-left: 6%;
+    border:2px solid #999;
+    padding-left: 7%;
     font-size: 1.5em;
     color: rgb(120,149,44); 
-    border-width: 1px;
-    border-color: rgb(120,149,44); 
+    border-width:2px;
+    border-color: #ababab; 
     border-style: solid;
+    outline: none;
 }
 input.emailInput {background-image: url(../images/img-login-email.png);}
 input.pswInput {background-image: url(../images/img-login-psw.png);}
 
-.loginInput::-webkit-input-placeholder 
+.aiheInput::-webkit-input-placeholder 
 { 
+    color:#ababab; 
+    font-size: 0.8em;
+}
+
+.aiheiInputFouce::-webkit-input-placeholder
+{
     color:rgb(120,149,44); 
     font-size: 0.8em;
 }
@@ -1457,12 +1533,29 @@ input.pswInput {background-image: url(../images/img-login-psw.png);}
     width: 2.79%;
     background: url(../images/img-login-checkbox.jpg) no-repeat;
     background-size: contain;
+    display: none;
 }
 
-#username_wrong,#pwd_wrong{
+#login-remember + label{
+    display:inline-block;
+    margin-left: 3.66%;
+    margin-top: 3.33%;
+    width:15px;
+    height:15px;
+    background: url(../images/img-login-checkbox.jpg) no-repeat top left;
+    background-size: 100% 100%
+}
+
+#login-remember:checked + label{
+    background: url(../images/img-login-checkboxSelected.jpg) no-repeat top left;
+    background-size: 100% 100%
+}
+
+.signup-wrong-text{
     color: #bd7535;
     margin-left: 1%;
     font-size: 1.3em;
+    display: none;
 }
 
 .login-otherInfo{
@@ -1495,7 +1588,7 @@ input.pswInput {background-image: url(../images/img-login-psw.png);}
 /* =========================================================== */
 .signup-content{
     width: 100%;
-    position: absolute;
+    /*position: absolute;*/
     top:2%;
     display: block;
 }
@@ -1503,7 +1596,7 @@ input.pswInput {background-image: url(../images/img-login-psw.png);}
 .signup-content img{
     /*position: absolute;*/
     width: 100%;
-    float: left;
+    /*float: left;*/
 }
 
 .signup-title-wrapper{
@@ -1549,9 +1642,10 @@ input.pswInput {background-image: url(../images/img-login-psw.png);}
     padding-left: 7%;
     font-size: 1.5em;
     color: rgb(120,149,44); 
-    border-width: 1px;
-    border-color: rgb(120,149,44); 
+    border-width: 2px;
+    border-color: #ababab; 
     border-style: solid;
+    outline: none;
 }
 
 .signup-username{
@@ -1571,11 +1665,11 @@ input.pswInput {background-image: url(../images/img-login-psw.png);}
     background-image: url(../images/img-signup-phone.png);
 }
 
-.signupInput::-webkit-input-placeholder 
+/*.signupInput::-webkit-input-placeholder 
 { 
-    color:rgb(120,149,44); 
+    color:#ababab; 
     font-size: 0.8em;
-}
+}*/
 
 .signup-babyInfo{
     margin-top: 0%;
@@ -1595,7 +1689,7 @@ input.pswInput {background-image: url(../images/img-login-psw.png);}
     padding-left: 1%;
     width: 17%;
     padding-top: 1.5%;
-  height: 50%;
+  height: 38%;
 }
 
 .signup-babyInfo div span{
@@ -1607,7 +1701,7 @@ input.pswInput {background-image: url(../images/img-login-psw.png);}
 
 .signup-hasborn{
     margin-left: 0%;
-    background-color: #d6efb0;
+    background-color: transparent;
 }
 
 .signup-baby-other{
@@ -1619,6 +1713,7 @@ input.pswInput {background-image: url(../images/img-login-psw.png);}
     height: 30%;
     width: 70%;
     z-index: 10;
+    display: none;
     
 }
 
@@ -1643,7 +1738,28 @@ input.pswInput {background-image: url(../images/img-login-psw.png);}
     border-color: rgb(120,149,44); 
     border-style: solid;
     font-size: 1.8em;
+    padding-top: 0.5%;
     color: rgb(120,149,44); 
+}
+
+
+
+.signup_radio,.signup_sex_radio{
+    display: none;
+}
+
+.signup_radio + label,.signup_sex_radio+label{
+    background: url(../images/img-radio.png) no-repeat top left;
+    background-size: 100% 100%;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+   
+}
+
+.signup_radio:checked + label,.signup_sex_radio:checked+label{
+    background: url(../images/img-radio-selected.png) no-repeat top left;
+    background-size: 100% 100%;
 }
 
 .signup-btns{
@@ -1682,7 +1798,7 @@ input.pswInput {background-image: url(../images/img-login-psw.png);}
     display: none;
     background: url(../images/img-sitemap-bg.png) no-repeat center center;
     width: 100%;
-    position: absolute;
+    /*position: absolute;*/
     top: 2%;
     height: 512px;
     background-size: 100% 100%;
@@ -1748,8 +1864,9 @@ input.pswInput {background-image: url(../images/img-login-psw.png);}
 .brand-main-content{
     position: relative;
     width: 94.72%;
-    margin-left:2.64%;
     height: 100%;
+    margin: auto;
+    max-width: 1060px;
     padding-top: 0.3%;
 }
 
@@ -1787,12 +1904,13 @@ input.pswInput {background-image: url(../images/img-login-psw.png);}
 }
 
 .brand-content{
+    margin-top: 8%;
     background:url(../images/img-brand-bg.png) no-repeat center center;
     background-size: 100% 100%;
     width: 100%;
-    height: 3180px;
+    /*height: 94%;*/
     top: 3.1%;
-    position: absolute;
+    /*position: absolute;*/
 }
 
 .brand-origin{
@@ -1829,14 +1947,14 @@ input.pswInput {background-image: url(../images/img-login-psw.png);}
 
 .brand-process{
     width: 100%;
-    height: 16.04%; /*540*/
+    /*height: 21.04%; */
     margin-top: 5%;
 }
 
 .brand-process-title,.brand-star-title,.brand-honor-title{
     width: 38.75%;
     margin-left: 30.625%;
-    margin-top: 2%;
+    margin-top: 4%;
 }
 
 .brand-process ul{
@@ -1875,8 +1993,21 @@ input.pswInput {background-image: url(../images/img-login-psw.png);}
     width: 86.6%;
     height: 66.29%;
     left: 6.7%;
-    position: absolute;
+    /*position: absolute;*/
     top: 31%;
+}
+
+.brand-process-content-title{
+    position: absolute;
+    width: 100%;
+    top:28%;
+}
+
+.brand-process-content-title h1{
+    text-align: center;
+    color:rgb(120,149,44);
+    
+
 }
 
 .brand-process-content h1{
@@ -1885,7 +2016,10 @@ input.pswInput {background-image: url(../images/img-login-psw.png);}
 }
 
 .brand-process-content img{
-    width: 45.89%;
+    /*position: absolute;*/
+    top: 0%;
+    width: 100%;
+    left: -5%;
     display: inline-block;
 }
 
@@ -1899,10 +2033,13 @@ input.pswInput {background-image: url(../images/img-login-psw.png);}
     right: 10%;
 }
 
+/*.brand-process-main-content*/
+
 .brand-process-arrow{
     position: absolute;
     width: 100%;
     height: 100%;
+    top: 0%;
 }
 
 .brand-process-left{
@@ -1918,12 +2055,13 @@ input.pswInput {background-image: url(../images/img-login-psw.png);}
 }
 
 .brand-star{
-    height: 36.95%; /*1175*/
+    margin-top: 6%;
+    /*height: 44.05%;*/
 }
 
 .brand-star-image{
-    position: absolute;
-    left: 4.92%;
+    /*position: absolute;*/
+    margin-left: 4.92%;
     width: 90.96%;
 }
 
@@ -1941,7 +2079,7 @@ input.pswInput {background-image: url(../images/img-login-psw.png);}
 
 .brand-video-title{
     font-size: 1.8em;
-    top: 45%;
+    top: 43%;
     left: 2.88%;
     color:rgb(120,149,44);
     position: absolute;
@@ -1954,7 +2092,7 @@ input.pswInput {background-image: url(../images/img-login-psw.png);}
     width: 100%;
     height: 25.1%;
     display: block;
-    position: absolute;
+    /*position: absolute;*/
 }
 
 .brand-video-left{
@@ -1989,20 +2127,20 @@ input.pswInput {background-image: url(../images/img-login-psw.png);}
 
 .brand-pic-title{
     font-size: 1.8em;
-    top: 76%;
-    left: 2.88%;
+    margin-top: 4%;
+    margin-left: 2.88%;
     color:rgb(120,149,44);
-    position: absolute;
+    /*position: absolute;*/
 }
 
 .brand-pic-content{
     background: url(../images/img-video-bg.png) no-repeat center center;
     background-size: 100% 100%;
-    top:79.28%;
+    margin-top: 4%;
     width: 100%;
     height: 18.55%;
     display: block;
-    position: absolute;
+    /*position: absolute;*/
 }
 
 .brand-pic-left{
@@ -2027,9 +2165,14 @@ input.pswInput {background-image: url(../images/img-login-psw.png);}
 .brand-pic-div{
     width: 22.9%;
     margin-top: 2.5%;
+    margin-bottom: 2.5%;
     margin-left: 1.1%;
     display: inline-block;
     
+}
+
+.brand-pic-preview{
+    width: 90%;
 }
 
 #showcase {
@@ -2076,14 +2219,18 @@ input.pswInput {background-image: url(../images/img-login-psw.png);}
 }
 
 .brand-honor{
-    height: 23.58%;
+    margin-top: 4%;
 }
 
 .honor-slide{
-    height: 50%;
+    /*position: absolute;*/
+    height: 400px;
+    width: 100%;
+    margin-top: 3%;
 }
 
 .honor-slide-bar{
+    margin-bottom: 4%;
     margin-top: 10%;
     width: 90%;
     margin-left: 5%;
@@ -2113,7 +2260,7 @@ input.pswInput {background-image: url(../images/img-login-psw.png);}
     width: 80%;
     margin-left: 10%;
     top:100px;
-    position: relative;
+    position: absolute;
     /*margin-top: 10%;*/
 }
 
@@ -2127,12 +2274,17 @@ input.pswInput {background-image: url(../images/img-login-psw.png);}
 /*================================================================*/
 
 .search-content{
+    
+    position: relative;
+    width:100%;
+    max-width: 1060px;
+    margin: auto;
+    padding-top: 20px;
+}
+
+.search-bg{
     background: url(../images/img-map-bg.png) no-repeat center center;
     background-size: 100% 100%;
-    position: relative;
-    width: 94.72%;
-    margin-left:2.64%;
-    padding-top: 0.3%;
 }
 
 .search-products{
@@ -2143,7 +2295,7 @@ input.pswInput {background-image: url(../images/img-login-psw.png);}
 }
 
 .search-btn{
-    margin: 5% 0% 7% 5%;
+      padding: 2% 0% 2% 5%;
     width: 16.15%;
     height: 10%;
     vertical-align: middle;
@@ -2151,6 +2303,7 @@ input.pswInput {background-image: url(../images/img-login-psw.png);}
 
 .search-btn span{
     position: absolute;
+    top: 0%;
     color: white;
     font-size: 1.5em;
     padding-top: 6%;
@@ -2158,13 +2311,12 @@ input.pswInput {background-image: url(../images/img-login-psw.png);}
     width: 100%;
 }
 .img-search-btn{
-    position: absolute;
-    float: left;
     width: 100%;
 }
 
 .img-search-close{
     position: absolute;
+    top: 0%;
   padding-top: 5%;
   padding-left: 77%;
   width: 18%;
@@ -2285,6 +2437,7 @@ input.pswInput {background-image: url(../images/img-login-psw.png);}
 .store-map{
     margin-left: 8%;
     margin-bottom: 10%;
+    width: 54%;
 }
 
 .store-map img{
@@ -2343,6 +2496,8 @@ input.pswInput {background-image: url(../images/img-login-psw.png);}
     background: url(../images_mobile/img-bg-lg.jpg) repeat-y center top;
     background-size: contain;
 }
+
+
 
 .baby-main-content{
     position: relative;
@@ -3042,8 +3197,80 @@ input.pswInput {background-image: url(../images/img-login-psw.png);}
 /*
  * footer section
  * */
+.footer-watch{
+    background: url(../images/img-footer-watch.jpg) no-repeat center center;
+    background-size: 100% 100%;
+    text-align: center;
+    height: 42px;
+    padding-top: 14px;
+}
 
+.footer-watch span{
+    color: rgb(120,149,44); 
+    font-size: 1.2em;
+}
 
+.footer-watch img{
+    margin-left: 1.25%;
+}
+
+.footer-site-map{
+    height: 200px;
+    position: relative;
+    background-color: rgba(230,230,230,0.56);
+}
+
+.footer-site-map-content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.footer-site-origin,.footer-site-baby,.footer-site-power{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.footer-site-origin{
+    margin-left: 27.5%;
+}
+
+.footer-site-baby,.footer-site-power{
+    margin-left: 9.8%;
+}
+
+.footer-site-list li:first-child{
+    
+    margin:31px 0 16px 0;
+}
+
+.footer-site-list li:first-child a{
+    color: rgb(120,149,44); 
+    font-size: 1.4em;
+}
+
+.footer-site-list li:not(:first-child){
+    
+    margin-bottom: 8px;
+}
+
+.footer-site-list li:not(:first-child) a{
+    color: #9c908d;
+    font-size: 1.2em;
+}
+
+.footer-site-about div{
+    margin-top: 23px;
+    text-align: center;
+    color:  #9f9f9f;
+    font-size: 1.2em;
+    padding-bottom: 23px;
+}
+
+.footer-site-about a{
+    color: #9f9f9f;
+    font-size: 1em;
+}
 
 /*
  * general use
