@@ -182,8 +182,8 @@
 			box.cont = $( '#' + options.container );
 		}
 		// Finds the default positioning of the box.
-		// box.initialOffsetTop =  parseInt( box.offset().top );
-		box.initialOffsetTop = options.offsetTop;
+		box.initialOffsetTop =  parseInt( box.offset().top);
+		// box.initialOffsetTop = options.offsetTop;
 		box.initialTop = parseInt( box.css( 'top' ) ) || 0;
 		// Hack to fix different treatment of boxes positioned 'absolute' and 'relative'
 		if ( box.css( 'position' ) == 'relative' )

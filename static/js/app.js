@@ -66,6 +66,51 @@ jQuery(document).ready(function($){
 		}
 		
 	});
+	$(".header-banner").glide({
+		arrows:false,
+		navigation:false
+	});
+	// console.log($())
+	$(".left-overlay").scrollFollow({
+		container:'site-content'
+	});
+
+	$(".right-overlay").scrollFollow({
+		container:'site-content'
+	});
+
+	var home_slider = $('.home-product-slider').glide({
+		autoplay:false,
+		arrows:false,
+		navigation:false,
+		circular:false,
+		afterTransition:function(){
+			$(".home-product-current").each(function() {
+				$(this).css("display","none");
+			});
+			$("#home-product"+(home_slider.current()-1)+"-current").css("display","block");
+		}
+	}).data('api_glide');
+	$(".home-product-left").click(function(){
+		home_slider.prev();
+	});
+	$(".home-product-right").click(function(){
+		home_slider.next();
+	});
+	$(".home-product-navItem").click(function() {
+		$(".home-product-current").each(function() {
+			$(this).css("display","none");
+		});
+		$(this).find('.home-product-current').css('display', 'block');
+		home_slider.jump($(this).attr('list'));
+	});
+
+	$(".home-step-step1-more").bind('mouseenter', function(event) {
+		$("#"+$(this).attr("id")+"_content").css('display', 'inline-block');
+
+	}).bind('mouseleave',function(e){
+		$("#"+$(this).attr("id")+"_content").css('display', 'none');
+	});
 
 	//加载文章
 	var article = new EJS({url: 'js/baby-artical.ejs'}).render({"data":[{"image":"images/img-baby-article-image3.jpg"},{"image":"images/img-baby-article-image2.jpg"},{"image":"images/img-baby-article-image1.jpg"},{"image":"images/img-baby-article-image2.jpg"}]});
@@ -89,8 +134,8 @@ jQuery(document).ready(function($){
 	$("#store_list").html(storeList);
 
 	//加载视频裂变
-	$(".baby-video-series").html(new EJS({url: 'js/baby-video-preview.ejs'}).render());
-	$(".brand-video-series").html(new EJS({url: 'js/baby-video-preview.ejs'}).render());
+	// $(".baby-video-series").html(new EJS({url: 'js/baby-video-preview.ejs'}).render());
+	// $(".brand-video-series").html(new EJS({url: 'js/baby-video-preview.ejs'}).render());
 
 
 	//404页面返回首页
@@ -204,25 +249,32 @@ jQuery(document).ready(function($){
 		$(".baby-story-overlay").css('display', 'none');
 	});
 
-	$(".brand-pic-right").click(function() {
-		
+
+	//baby 视频加载
+	$(".baby-video-series").find('ul').append('<li><div class="baby-video-page0"></div></li>');
+	$(".baby-video-page0").html(new EJS({url: 'js/baby-video-preview.ejs'}).render());
+
+	$(".baby-video-series").find('ul').append('<li><div class="baby-video-page1"></div></li>');
+	$(".baby-video-page1").html(new EJS({url: 'js/baby-video-preview.ejs'}).render());
+
+	var babyVideo = $(".baby-video-series").glide({
+		autoplay:false,
+		arrows:false,
+		navigation:false,
+		circular:false
+	}).data('api_glide');
+	
+	$(".baby-video-left").click(function(){
+		babyVideo.prev();
 	});
 
-	//视频浮层弹出
-	$(".baby-video-div").click(function(){
-		$(".brand-video-overlay").css('display','block');
+	$(".baby-video-right").click(function(){
+		babyVideo.next();
 	});
 
-	$(".brand-video-overlay").click(function(){
-		$(".brand-video-overlay").css('display', 'none');
-	});
-
-	$(".brand-pic-div").click(function(){
-		$(".brand-pic-overlay").css('display','block');
-	});
-
-	$(".brand-pic-overlay").click(function(){
-		$(".brand-pic-overlay").css('display', 'none');
+	$(".baby-video-flash").scrollFollow({
+		container:'baby_video_overlay',
+		offset:0
 	});
 
 	//品牌页面 荣誉滑动逻辑
@@ -258,12 +310,35 @@ jQuery(document).ready(function($){
 
 
 	//品牌页面 历程逻辑
+	var brandProcess = $(".brand-process-content").glide({
+		autoplay:false,
+		arrows:false,
+		navigation:false,
+		circular:false,
+		afterTransition:function(){
+			$(".brand-process").find($(".process-year")).find('li').find('img').each(function() {
+				$(this).attr('src', 'images/img-brand-process-dot.png');
+				if ($(this).attr("process-list") == brandProcess.current()) 
+				{
+					$(this).attr('src', 'images/img-brand-process-selected.png');
+				}
+			});
+		}
+	}).data('api_glide');
+
 	$(".img-brand-process-dot").click(function(event) {
-		$(".brand-process").find('li').find('img').each(function(index, el) {
+		$(".brand-process").find($(".process-year")).find('li').find('img').each(function() {
 			$(this).attr('src', 'images/img-brand-process-dot.png');
 		});
-
 		$(this).attr('src', 'images/img-brand-process-selected.png');
+		brandProcess.jump($(this).attr("process-list"));
+	});
+
+	$(".brand-process-left").click(function(){
+		brandProcess.prev();
+	});
+	$(".brand-process-right").click(function(){
+		brandProcess.next();
 	});
 
 	var honorSlideBegin = function(direction){
@@ -282,14 +357,79 @@ jQuery(document).ready(function($){
 
 	$(".brand-video-flash").scrollFollow({
 		container:'brand_video_overlay',
-		offsetTop:400
+		offset:0
 	});
 
 	$(".brand-pic-big").scrollFollow({
 		container:'brand_pic_overlay',
-		offsetTop:530
+		offset:0
+	});
+
+	$(".brand-pic-series").find('ul').append('<li><div class="brand-pic-page0"></div></li>');
+	$(".brand-pic-page0").html(new EJS({url: 'js/brand-pic-preview.ejs'}).render());
+
+	$(".brand-pic-series").find('ul').append('<li><div class="brand-pic-page1"></div></li>');
+	$(".brand-pic-page1").html(new EJS({url: 'js/brand-pic-preview.ejs'}).render());
+
+	var brandPic = $(".brand-pic-series").glide({
+		autoplay:false,
+		arrows:false,
+		navigation:false,
+		circular:false
+	}).data('api_glide');
+	
+	$(".brand-pic-left").click(function(){
+		brandPic.prev();
+	});
+
+	$(".brand-pic-right").click(function(){
+		brandPic.next();
+	});
+
+	$(".brand-video-series").find('ul').append('<li><div class="brand-video-page0"></div></li>');
+	$(".brand-video-page0").html(new EJS({url: 'js/baby-video-preview.ejs'}).render());
+
+	$(".brand-video-series").find('ul').append('<li><div class="brand-video-page1"></div></li>');
+	$(".brand-video-page1").html(new EJS({url: 'js/baby-video-preview.ejs'}).render());
+
+	var brandVideo = $(".brand-video-series").glide({
+		autoplay:false,
+		arrows:false,
+		navigation:false,
+		circular:false
+	}).data('api_glide');
+	
+	$(".brand-video-left").click(function(){
+		brandVideo.prev();
+	});
+
+	$(".brand-video-right").click(function(){
+		brandVideo.next();
 	});
 	
+	//视频浮层弹出
+	$(".baby-video-div").click(function(){
+		$(".brand-video-overlay").css('display','block');
+		$(".baby-video-overlay").css('display','block');
+	});
+
+	$(".baby-video-overlay").click(function(){
+		$(".baby-video-overlay").css('display', 'none');
+	});
+
+	$(".brand-video-overlay").click(function(){
+		$(".brand-video-overlay").css('display', 'none');
+	});
+
+	$(".brand-pic-div").click(function(){
+		$(".brand-pic-overlay").css('display','block');
+	});
+
+	$(".brand-pic-overlay").click(function(){
+		$(".brand-pic-overlay").css('display', 'none');
+	});
+	
+
 	
 	
 
