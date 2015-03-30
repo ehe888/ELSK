@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
          -->
         <link href='css/style.css' rel='stylesheet' />
+        <link href="css/datepicker.css" rel="stylesheet"/>
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -69,8 +70,69 @@
                         </div>
                     </div>
                 </div>
+                <div class="site-nav">
+                    <div class="site-nav-content">
+                        <ul>
+                            <li>
+                                <a href="index.html">
+                                    <div>
+                                        <img src="images/img-nav-0.png">
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="brand.html">
+                                    <div>
+                                        <img src="images/img-nav-1.png">
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="power.html">
+                                    <div>
+                                        <img src="images/img-nav-2.png">
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="baby.html">
+                                    <div>
+                                        <img src="images/img-nav-3.png">
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="site-nav-search">
+                                <div>
+                                    <input type="text" id="site-nav-search">
+                                </div>
+                            </li>
+                            <li class="site-nav-signup">
+                                <a href="signup.html">
+                                        <img src="images/img-nav-signup.png">
+                                </a>
+                            </li>
+                            <li class="site-nav-login">
+                                <a href="login.html">
+                                    <img src="images/img-nav-login.png">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="site-content">
+            <div class="site-content" id="site-content">
+                <div class="left-overlay">
+                    <img src="images/img-left-overlay.png">
+                </div>
+                <div class="right-overlay">
+                    <img src="images/img-right-overlay.png">
+                    <div class="right-overlay-btn1">
+                        <img src="images/img-right-overlay-btn1.png">
+                    </div>
+                    <div class="right-overlay-btn2">
+                        <img src="images/img-right-overlay-btn2.png">
+                    </div>
+                </div>
                 <div class="main-content">
                     <div class="signup-content">
                         <img src="images/img-signup-bg.png">
@@ -85,51 +147,64 @@
                                     </div>
                                 </div>
                                 <div class="signup-input-wrapper">
-                                    <input type="text" class="signupInput emailInput signup-username" placeholder="邮箱">
-                                    <span id="username_wrong">邮箱错误</span>
-                                    <input type="text" class="signupInput phoneInput signup-other" placeholder="手机">
-                                    <span id="username_wrong">手机错误</span>
-                                    <input type="text" class="signupInput pswInput signup-other" placeholder="密码">
-                                    <span id="pwd_wrong">密码错误</span>
-                                    <input type="text" class="signupInput pswInput signup-other" placeholder="重复密码">
-                                    <span id="pwd_wrong">密码不一致</span>
+                                    <input type="text" class="signupInput emailInput signup-username aiheInput" id="emailInput" placeholder="邮箱">
+                                    <span id="username_wrong" class="signup-wrong-text">邮箱错误</span>
+                                    <input type="text" class="signupInput phoneInput signup-other aiheInput" placeholder="手机">
+                                    <span id="mobile_wrong" class="signup-wrong-text">手机错误</span>
+                                    <input type="text" class="signupInput pswInput signup-other aiheInput" placeholder="密码">
+                                    <span id="pwd_wrong" class="signup-wrong-text">密码错误</span>
+                                    <input type="text" class="signupInput pswInput signup-other aiheInput" placeholder="重复密码">
+                                    <span id="pwd_repeat_wrong" class="signup-wrong-text">密码不一致</span>
                                 </div>
                                 <div class="signup-babyInfo">
                                     <h1>宝宝信息：</h1>
                                     <div class="signup-hasborn">
-                                        <input type="radio" id="signup_hasbord">
+                                        <input type="radio" id="signup_hasbord" class="signup_radio">
+                                        <label for="signup_hasbord"></label>
                                         <span>宝宝已出生</span>
                                     </div>
                                     <div class="signup-pregnant signup-baby-other">
-                                        <input type="radio" id="signup_pregnant">
+                                        <input type="radio" id="signup_pregnant" class="signup_radio">
+                                        <label for="signup_pregnant"></label>
                                         <span>正在怀孕中</span>
                                     </div>
                                     <div class="signup-ready-pregnant signup-baby-other">
-                                        <input type="radio" id="signup_readypregnant">
+                                        <input type="radio" id="signup_readypregnant" class="signup_radio">
+                                        <label for="signup_readypregnant"></label>
                                         <span>准备怀孕</span>
                                     </div>
                                     <div class="signup-notborn-other signup-baby-other">
-                                        <input type="radio" id="signup_notborn_other">
+                                        <input type="radio" id="signup_notborn_other" class="signup_radio">
+                                        <label for="signup_notborn_other"></label>
                                         <span>其他</span>
                                     </div>
                                 </div>
                                 <div class="signup-baby-detail">
-                                    <span>宝宝生日：</span>
-                                    <input type="datetime" id="signup_baby_birth">
-                                    <span style="margin-left: 3.5%">宝宝性别：</span>
-                                    <input type="radio" id="signup_male">
-                                    <span>男</span>
-                                    <input type="radio" id="signup_female">
-                                    <span>女</span>
+                                    <div class="wrapper">
+                                        <div class="signup-baby-input">
+                                            <span>宝宝生日：</span>
+                                            <input type="datetime" id="signup_baby_birth">
+                                            <span style="margin-left: 3.5%">宝宝性别：</span>
+                                            <input type="radio" id="signup_male" class="signup_sex_radio">
+                                            <label for="signup_male"></label>
+                                            <span>男</span>
+                                            <input type="radio" id="signup_female" class="signup_sex_radio">
+                                            <label for="signup_female"></label>
+                                            <span>女</span>
+                                        </div>
+                                        <div class="signup-datepicker">
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="signup-btns">
                                     <div class="signup-btn">
                                         <img src="images/img-signup-btn.png">
                                     </div>
                                     <div class="signup-login">
-                                        <img src="images/img-login-btn.png">
+                                        <a href="login.html"><img src="images/img-login-btn.png"></a>
                                     </div>
                                 </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -157,11 +232,81 @@
                     </div>
                 </div>
             </div>
-            <div class="site-footer"></div>
+            <div class="site-footer">
+                <div class="footer-watch">
+                    <span>关注我们：</span>
+                    <img src="images/img-weixin.jpg">
+                    <img src="images/img-qqweibo.jpg">
+                    <img src="images/img-qq.jpg">
+                    <img src="images/img-weibo.jpg">
+                </div>
+                <div class="footer-site-map">
+                    <div class="footer-site-map-content">
+                        <div class="footer-site-origin footer-site-list">
+                            <ul>
+                                <li><a href="brand.html">嗳的起源</a></li>
+                                <li><a href="brand.html#honor">关于嗳呵</a></li>
+                                <li><a href="brand.html#origin">丹麦母婴护理科技</a></li>
+                                <li><a href="brand.html#process">嗳呵成长史</a></li>
+                                <li><a href="brand.html#star">陆毅鲍蕾</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-site-baby footer-site-list">
+                            <ul>
+                                <li><a href="baby.html">绿色育婴</a></li>
+                                <li><a href="baby.html">1岁一下</a></li>
+                                <li><a href="baby.html">1-3岁</a></li>
+                                <li><a href="baby.html">3岁以上</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-site-power footer-site-list">
+                            <ul>
+                                <li><a href="power.html">绿色呵护力</a></li>
+                                <li><a href="power.html">备孕 怀孕 0-6个月</a></li>
+                                <li><a href="power.html">6个月-3岁</a></li>
+                                <li><a href="power.html">3岁-6岁</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-site-about">
+                    <div class="footer-site-about-content">
+                        <p>
+                            <a href="">© 隐私政策 |</a>
+                            <a href=""> 法律声明 | </a>
+                            服务热线：400-880-5299 |</a>
+                            <a href=""> 嗳呵天猫旗舰店  | </a>
+                            <a href="">  嗳呵新浪官方微博 </a>
+                        </p>
+                        <p>
+                            育儿合作网站：  
+                            <a href="">宝宝树，</a>
+                            <a href="">妈妈网，</a>
+                            <a href="">育儿网，</a>
+                            <a href="">摇篮网，</a>
+                            <a href="">飞牛网，</a>
+                            <a href="">强生婴儿，</a>
+                            <a href="">宝宝中心，</a>
+                            <a href="">太平洋亲子网</a>
+                        </p>
+                        <p>上海嗳呵母婴用品国际贸易有限公司 版权所有 沪ICP备07002747号</p>
+                        <p>本网站内容受世界各国版权法保护，使用者只可以为非商业性的个人目的下载本网站内容</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
+        <script type="text/javascript" src="js/prototype.js"></script>
         <script src="js/jquery-1.11.1.js"></script> 
-        <script src="js/app.js"></script>
+        <script type="text/javascript" src="js/jquery-ui.js"></script>
+        <script type="text/javascript" src="js/jquery.scrollfollow.js"></script>
+        <script type="text/javascript" src="js/jquery.glide.js"></script>
+        <script src="js/ejs_production.js"></script>
+        <script type="text/javascript" src="js/effects.js"></script>
+        <script type="text/javascript" src="js/showcase.js"></script>
+        <script type="text/javascript" src="js/jquery.event.ue.js"></script>
+        <script type="text/javascript" src="js/jquery.udraggable.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
 <!-- 
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
          -->
